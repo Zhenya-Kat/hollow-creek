@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11ed9951478c12439754e947dcd4a87, type: 3}
+  m_Name: AudioCues
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Audio.AudioCues
+  buttonClick: {fileID: 11400000, guid: e2e2bb8b4ff15594ca4d59e97410b72c, type: 2}
+  screenOpen: {fileID: 11400000, guid: 9391a7d445fd1224e9f23266191dc020, type: 2}
+  screenClose: {fileID: 11400000, guid: 6a462accacce1794dac318fd171590ec, type: 2}
+  notebookOpen: {fileID: 11400000, guid: 39d1e2432e5873f409e69fb470081688, type: 2}
+  notebookClose: {fileID: 11400000, guid: 4bdbee32626057c4c94c54f8758c14c8, type: 2}
+  clueFound: {fileID: 11400000, guid: 0f9b5e711e3b7154ca0f9ce1108b5c04, type: 2}
+  itemFound: {fileID: 11400000, guid: 0f23b793ca1f6c646b75f0e353f21086, type: 2}
+  inspectStart: {fileID: 11400000, guid: 8a6ab2eadf8e6104cbfc29ea20684f5e, type: 2}
+  keypadPress: {fileID: 11400000, guid: afcb0c10267ad8b4ab0755ad6ff855af, type: 2}
+  wrong: {fileID: 11400000, guid: c700fe36e226eda4f84de8f6c751b127, type: 2}
+  unlock: {fileID: 11400000, guid: c5150f55cf455a644809f7ca810c36d4, type: 2}
+  puzzleSolved: {fileID: 11400000, guid: 8c538f65235f89845a8b4e81a8c99208, type: 2}
+  photoSwap: {fileID: 11400000, guid: cd4927c82a960054ea5f3bdeef5d1b96, type: 2}
+  pencilScratch: {fileID: 11400000, guid: 3a685f66067b60e4fba5aed40f8bd190, type: 2}

@@ -2362,6 +2362,7 @@ MonoBehaviour:
   availableWhen:
     rid: -2
   actions:
+  - rid: 547263848753660013
   - rid: 547263845907825037
   references:
     version: 2
@@ -2373,6 +2374,10 @@ MonoBehaviour:
       data:
         location: {fileID: 11400000, guid: e31c1d0369e3b0c4bbbfc25e19623af5, type: 2}
         spawnId: from_house
+    - rid: 547263848753660013
+      type: {class: PlaySoundAction, ns: HollowCreek.Gameplay.Audio, asm: HollowCreek.Gameplay}
+      data:
+        sound: {fileID: 11400000, guid: 9fa7e81928296ee48905b39a1a06e185, type: 2}
 --- !u!23 &683465697
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7656,6 +7661,7 @@ MonoBehaviour:
   availableWhen:
     rid: 547263845907825041
   actions:
+  - rid: 547263848753660014
   - rid: 547263845907825039
   - rid: 547263845907825040
   references:
@@ -7695,6 +7701,10 @@ MonoBehaviour:
       type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
       data:
         fact: {fileID: 11400000, guid: bf3fd4036688237488c2914b522803f2, type: 2}
+    - rid: 547263848753660014
+      type: {class: PlaySoundAction, ns: HollowCreek.Gameplay.Audio, asm: HollowCreek.Gameplay}
+      data:
+        sound: {fileID: 11400000, guid: ec6e85ae8e46ebe4dbdc24ed31635d60, type: 2}
 --- !u!23 &2145465198
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -12,6 +12,12 @@ namespace HollowCreek.Core.Data
 
         [SerializeField, HideInInspector] string sceneName;
 
+        [Header("Звук")]
+        [SerializeField, Tooltip("Фоновый звук локации (ветер, гул помещения)")]
+        Audio.SoundCue ambience;
+        [SerializeField, Tooltip("Звук шагов в этой локации")]
+        Audio.SoundCue footsteps;
+
 #if UNITY_EDITOR
         [SerializeField, Tooltip("Сцена локации. Должна быть добавлена в список сцен сборки.")]
         UnityEditor.SceneAsset scene;
@@ -25,6 +31,8 @@ namespace HollowCreek.Core.Data
 
         public LocalizedString DisplayName => displayName;
         public string SceneName => sceneName;
+        public Audio.SoundCue Ambience => ambience;
+        public Audio.SoundCue Footsteps => footsteps;
     }
 }
 

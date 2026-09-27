@@ -93,6 +93,7 @@ namespace HollowCreek.UI.Screens
                 messages.Show(definition.EndingTitle, definition.EndingText);
                 return;
             }
+            UiAudio.Play(c => c.wrong);
             status.text = UIText.Get(caseService.Explain(verdict, suspect));
         }
 

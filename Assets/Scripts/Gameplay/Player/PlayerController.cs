@@ -19,6 +19,8 @@ namespace HollowCreek.Gameplay.Player
         [SerializeField, Tooltip("Как быстро набирается и сбрасывается скорость")]
         float acceleration = 14f;
         [SerializeField] float gravity = -20f;
+        [SerializeField, Tooltip("Длина шага (м) — через столько метров звучит шаг")]
+        float stepLength = 0.8f;
 
         [Header("Обзор")]
         [SerializeField, Tooltip("Градусов на пиксель движения мыши")]
@@ -34,6 +36,10 @@ namespace HollowCreek.Gameplay.Player
         Vector3 horizontalVelocity;
         float verticalVelocity;
         float pitch;
+        float distanceSinceStep;
+
+        /// <summary>Игрок сделал шаг (для звука шагов).</summary>
+        public event System.Action Stepped;
 
         /// <summary>Точка глаз игрока — на неё смотрят собеседники.</summary>
         public Vector3 EyePosition => head.position;
@@ -126,7 +132,18 @@ namespace HollowCreek.Gameplay.Player
             horizontalVelocity = Vector3.MoveTowards(horizontalVelocity, target, acceleration * Time.deltaTime);
 
             verticalVelocity = body.isGrounded ? -1f : verticalVelocity + gravity * Time.deltaTime;
+            var before = transform.position;
             body.Move((horizontalVelocity + Vector3.up * verticalVelocity) * Time.deltaTime);
+
+            // Шаги считаем по реально пройденному расстоянию: упёрся в стену — шагов нет.
+            var moved = transform.position - before;
+            moved.y = 0f;
+            if (!body.isGrounded) return;
+            distanceSinceStep += moved.magnitude;
+            var stride = stepLength * (horizontalVelocity.magnitude > walkSpeed + 0.1f ? 1.35f : 1f);
+            if (distanceSinceStep < stride) return;
+            distanceSinceStep = 0f;
+            Stepped?.Invoke();
         }
 
         void OnLocationLoaded(LocationRoot location, SpawnPoint spawn)

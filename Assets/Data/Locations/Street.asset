@@ -23,6 +23,8 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   sceneName: Street
+  ambience: {fileID: 11400000, guid: d13db721119ecef44933132d1f5068c0, type: 2}
+  footsteps: {fileID: 11400000, guid: bf37b8ce49738494dbd2326092b14d1a, type: 2}
   scene: {fileID: 102900000, guid: 70ee5eac938f1c044bf0f9e7ffa04c63, type: 3}
   references:
     version: 2

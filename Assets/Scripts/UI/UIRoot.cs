@@ -37,6 +37,9 @@ namespace HollowCreek.UI
             var root = GetComponent<UIDocument>().rootVisualElement;
             // Контейнеры шаблонов не должны перехватывать мышь — только сами панели.
             root.Query<TemplateContainer>().ForEach(t => t.pickingMode = PickingMode.Ignore);
+            // Щелчок любой кнопки — мышью, клавиатурой или геймпадом.
+            root.RegisterCallback<ClickEvent>(e => { if (e.target is Button) UiAudio.Play(c => c.buttonClick); }, TrickleDown.TrickleDown);
+            root.RegisterCallback<NavigationSubmitEvent>(e => { if (e.target is Button) UiAudio.Play(c => c.buttonClick); }, TrickleDown.TrickleDown);
 
             var modals = Services.Get<ModalStack>();
             var input = Services.Get<GameInput>();

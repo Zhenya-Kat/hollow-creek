@@ -5476,6 +5476,7 @@ MonoBehaviour:
   availableWhen:
     rid: -2
   actions:
+  - rid: 547263848753660011
   - rid: 547263845907825031
   references:
     version: 2
@@ -5487,6 +5488,10 @@ MonoBehaviour:
       data:
         location: {fileID: 11400000, guid: d859c900ee8f1b346a74a5bf5619c4c9, type: 2}
         spawnId: from_street
+    - rid: 547263848753660011
+      type: {class: PlaySoundAction, ns: HollowCreek.Gameplay.Audio, asm: HollowCreek.Gameplay}
+      data:
+        sound: {fileID: 11400000, guid: 9fa7e81928296ee48905b39a1a06e185, type: 2}
 --- !u!23 &914445853
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11965,6 +11970,7 @@ MonoBehaviour:
   availableWhen:
     rid: -2
   actions:
+  - rid: 547263848753660012
   - rid: 547263845907825034
   references:
     version: 2
@@ -11976,6 +11982,10 @@ MonoBehaviour:
       data:
         location: {fileID: 11400000, guid: 0bb6164bce730a24c961808851a20580, type: 2}
         spawnId: from_street
+    - rid: 547263848753660012
+      type: {class: PlaySoundAction, ns: HollowCreek.Gameplay.Audio, asm: HollowCreek.Gameplay}
+      data:
+        sound: {fileID: 11400000, guid: 9fa7e81928296ee48905b39a1a06e185, type: 2}
 --- !u!23 &2089608205
 MeshRenderer:
   m_ObjectHideFlags: 0

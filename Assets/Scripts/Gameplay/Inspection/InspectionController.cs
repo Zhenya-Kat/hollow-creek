@@ -60,6 +60,7 @@ namespace HollowCreek.Gameplay.Inspection
             inspectCamera.gameObject.SetActive(true);
             modals.Push(this);
 
+            if (Services.TryGet<Audio.AudioService>(out var audio)) audio.Play(audio.Cues != null ? audio.Cues.inspectStart : null);
             if (target.Grants != null) state.Grant(target.Grants);
             Started?.Invoke(target);
         }

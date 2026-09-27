@@ -1450,6 +1450,7 @@ MonoBehaviour:
   availableWhen:
     rid: -2
   actions:
+  - rid: 547263848753660015
   - rid: 547263845907825070
   references:
     version: 2
@@ -1461,6 +1462,10 @@ MonoBehaviour:
       data:
         location: {fileID: 11400000, guid: e31c1d0369e3b0c4bbbfc25e19623af5, type: 2}
         spawnId: from_diner
+    - rid: 547263848753660015
+      type: {class: PlaySoundAction, ns: HollowCreek.Gameplay.Audio, asm: HollowCreek.Gameplay}
+      data:
+        sound: {fileID: 11400000, guid: 9fa7e81928296ee48905b39a1a06e185, type: 2}
 --- !u!23 &415096717
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -68,6 +68,9 @@ namespace HollowCreek.UI.Screens
             else if (Modals.IsEmpty) Open();
         }
 
+        protected override Core.Audio.SoundCue OpenSound(Core.Audio.AudioCues cues) => cues.notebookOpen;
+        protected override Core.Audio.SoundCue CloseSound(Core.Audio.AudioCues cues) => cues.notebookClose;
+
         protected override void OnOpened()
         {
             RefreshObjectives();

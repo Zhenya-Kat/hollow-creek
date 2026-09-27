@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6174f2afec5b449b28ec19258cbbe1, type: 3}
+  m_Name: Pencil_Scratch
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Audio.SoundCue
+  clips:
+  - {fileID: 8300000, guid: 534ebcfcfe886f34cac7fc43cfa7b400, type: 3}
+  - {fileID: 8300000, guid: 227d972b4cf0c3c4dbb4fc36e0787b2f, type: 3}
+  - {fileID: 8300000, guid: 6d8cb5f48d8a52f42ace37912bdb46e8, type: 3}
+  - {fileID: 8300000, guid: 0171a59361d9d834bb915d281419bb7c, type: 3}
+  - {fileID: 8300000, guid: e140287b5a463334bb9a333195cacb6c, type: 3}
+  volume: 0.35
+  pitch: {x: 0.9, y: 1.2}
+  category: 0

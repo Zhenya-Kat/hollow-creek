@@ -39,6 +39,7 @@ namespace HollowCreek.UI.Common
             {
                 IsOpen = true;
                 Root.RemoveFromClassList(HiddenClass);
+                UiAudio.Play(OpenSound);
                 OnOpened();
             }
             Modals.Push(this);
@@ -49,6 +50,7 @@ namespace HollowCreek.UI.Common
             if (!IsOpen) return;
             IsOpen = false;
             Root.AddToClassList(HiddenClass);
+            UiAudio.Play(CloseSound);
             Modals.Remove(this);
             OnClosed();
         }
@@ -59,6 +61,12 @@ namespace HollowCreek.UI.Common
         {
             if (IsOpen) Close();
         }
+
+        /// <summary>Звук открытия экрана (null — без звука).</summary>
+        protected virtual Core.Audio.SoundCue OpenSound(Core.Audio.AudioCues cues) => cues.screenOpen;
+
+        /// <summary>Звук закрытия экрана (по умолчанию нет: кнопка и так щёлкает).</summary>
+        protected virtual Core.Audio.SoundCue CloseSound(Core.Audio.AudioCues cues) => null;
 
         protected virtual void OnOpened() { }
         protected virtual void OnClosed() { }

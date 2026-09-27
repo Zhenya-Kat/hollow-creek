@@ -100,6 +100,7 @@ namespace HollowCreek.UI.Puzzles
         {
             if (solved) return;
             solved = true;
+            UiAudio.Play(c => c.puzzleSolved);
             body.SetEnabled(false);
             // Небольшая пауза, чтобы игрок увидел результат (зелёная лампа, проступивший текст).
             Root.schedule.Execute(() =>

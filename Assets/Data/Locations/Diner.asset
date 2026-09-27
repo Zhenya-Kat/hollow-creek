@@ -23,6 +23,8 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   sceneName: Diner
+  ambience: {fileID: 11400000, guid: e2e318804d781a04382b8bd12dc96219, type: 2}
+  footsteps: {fileID: 11400000, guid: bf37b8ce49738494dbd2326092b14d1a, type: 2}
   scene: {fileID: 102900000, guid: 45806c8b67a47f64796c8073f0db897a, type: 3}
   references:
     version: 2

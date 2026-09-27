@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6174f2afec5b449b28ec19258cbbe1, type: 3}
+  m_Name: Ui_Open
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Audio.SoundCue
+  clips:
+  - {fileID: 8300000, guid: 0111c5d41cc3fad4ca4624711f4cc03d, type: 3}
+  - {fileID: 8300000, guid: 729efa705d2b5694ea693d036aedda30, type: 3}
+  - {fileID: 8300000, guid: 77a04af2da05be74499b22eb972a8431, type: 3}
+  - {fileID: 8300000, guid: 5a255aa1913f11e4baf0540048f61285, type: 3}
+  volume: 0.3
+  pitch: {x: 0.95, y: 1.05}
+  category: 1

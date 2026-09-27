@@ -95,6 +95,7 @@ namespace HollowCreek.UI.Puzzles
         void Press(char digit)
         {
             if (locked || !state.Press(digit)) return;
+            UiAudio.Play(c => c.keypadPress);
             if (lamp.ClassListContains(LampWrong))
             {
                 lamp.RemoveFromClassList(LampWrong);
@@ -117,6 +118,7 @@ namespace HollowCreek.UI.Puzzles
             if (state.Submit())
             {
                 locked = true;
+                UiAudio.Play(c => c.unlock);
                 lamp.AddToClassList(LampRight);
                 context.SetStatus(UIText.Get("codelock.right"));
                 Refresh();
@@ -124,6 +126,7 @@ namespace HollowCreek.UI.Puzzles
                 return;
             }
             lamp.AddToClassList(LampWrong);
+            UiAudio.Play(c => c.wrong);
             context.SetStatus(UIText.Get("codelock.wrong"));
             Refresh();
             firstKey.Focus();

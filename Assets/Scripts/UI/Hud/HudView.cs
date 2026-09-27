@@ -101,7 +101,9 @@ namespace HollowCreek.UI.Hud
                 ItemDefinition item => UIText.Format("toast.item", UIText.Get(item.Title)),
                 _ => null,
             };
-            if (text != null) ShowToast(text);
+            if (text == null) return;
+            ShowToast(text);
+            UiAudio.Play(c => fact is ClueDefinition ? c.clueFound : c.itemFound);
         }
 
         void ShowToast(string text)

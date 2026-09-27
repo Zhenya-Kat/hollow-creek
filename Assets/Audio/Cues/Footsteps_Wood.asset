@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6174f2afec5b449b28ec19258cbbe1, type: 3}
+  m_Name: Footsteps_Wood
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Audio.SoundCue
+  clips:
+  - {fileID: 8300000, guid: 3de959d9e8d05624fb30399b8b290649, type: 3}
+  - {fileID: 8300000, guid: 52888b1fdf427b140b410edcdc007c2f, type: 3}
+  - {fileID: 8300000, guid: ec76e992fdd9d3742923df2112685734, type: 3}
+  - {fileID: 8300000, guid: 927adbb05ea52f0459b040b482debb19, type: 3}
+  - {fileID: 8300000, guid: 4dfc904afa6ea14479b76182177c4180, type: 3}
+  volume: 0.5
+  pitch: {x: 0.9, y: 1.1}
+  category: 0

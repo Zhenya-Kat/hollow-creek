@@ -64,7 +64,11 @@ namespace HollowCreek.UI.Puzzles
             if (selected < 0) selected = position;
             else
             {
-                if (selected != position) state.Swap(selected, position);
+                if (selected != position)
+                {
+                    state.Swap(selected, position);
+                    UiAudio.Play(c => c.photoSwap);
+                }
                 selected = -1;
             }
             Refresh();
@@ -73,7 +77,11 @@ namespace HollowCreek.UI.Puzzles
         void Check()
         {
             if (state.IsSolved) context.Solved();
-            else context.SetStatus(UIText.Get(puzzle.WrongOrderMessage));
+            else
+            {
+                UiAudio.Play(c => c.wrong);
+                context.SetStatus(UIText.Get(puzzle.WrongOrderMessage));
+            }
         }
 
         void Refresh()

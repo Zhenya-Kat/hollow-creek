@@ -37,6 +37,7 @@ namespace HollowCreek.UI.Puzzles
         readonly List<List<Vector2>> strokes = new();
         int pointCount;
         bool virtualPressing;
+        float nextScratch;
         VisualElement paper;
         VisualElement cursor;
         IVisualElementScheduledItem ticker;
@@ -159,6 +160,11 @@ namespace HollowCreek.UI.Puzzles
         void RubAt(Vector2 point)
         {
             if (done) return;
+            if (Time.unscaledTime >= nextScratch)
+            {
+                nextScratch = Time.unscaledTime + 0.14f;
+                UiAudio.Play(c => c.pencilScratch);
+            }
             if (strokes.Count == 0) BeginStroke();
             var stroke = strokes[^1];
             if (pointCount < MaxPoints && (stroke.Count == 0 || (stroke[^1] - point).sqrMagnitude > 16f))

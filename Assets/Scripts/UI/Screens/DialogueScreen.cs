@@ -56,6 +56,8 @@ namespace HollowCreek.UI.Screens
 
         public override bool DefersMessages => true;
 
+        protected override Core.Audio.SoundCue OpenSound(Core.Audio.AudioCues cues) => null;
+
         public override void OnBack()
         {
             // Первое нажатие Esc дописывает реплику, второе — завершает разговор.

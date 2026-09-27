@@ -23,6 +23,8 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   sceneName: Sandbox
+  ambience: {fileID: 0}
+  footsteps: {fileID: 11400000, guid: bf37b8ce49738494dbd2326092b14d1a, type: 2}
   scene: {fileID: 102900000, guid: 74ff80dcc941cf64fadc0ae4d534ff0e, type: 3}
   references:
     version: 2
