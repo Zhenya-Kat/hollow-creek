@@ -3,8 +3,13 @@
         <ui:VisualElement class="panel notebook__panel">
             <ui:VisualElement class="notebook__header">
                 <ui:Label text="@notebook.title" class="title" />
-                <ui:Button name="close" text="@notebook.close" class="button" />
+                <ui:VisualElement class="notebook__actions">
+                    <ui:Button name="hint" text="@notebook.hint" class="button" />
+                    <ui:Button name="accuse" text="@notebook.accuse" class="button button--primary" />
+                    <ui:Button name="close" text="@notebook.close" class="button" />
+                </ui:VisualElement>
             </ui:VisualElement>
+            <ui:VisualElement name="objectives" class="notebook__objectives" />
             <ui:VisualElement class="notebook__columns">
                 <ui:ScrollView name="list" class="notebook__list" horizontal-scroller-visibility="Hidden" />
                 <ui:ScrollView class="notebook__detail" horizontal-scroller-visibility="Hidden">

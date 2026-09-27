@@ -97,6 +97,7 @@ namespace HollowCreek.Gameplay.Save
                 facts = state.Facts.Select(f => f.Id).ToList(),
                 askedTopics = log.Entries.ToList(),
             };
+            if (Services.TryGet<ObjectiveTracker>(out var objectives)) data.hints = objectives.SaveHints().ToList();
             if (Services.TryGet<PlayerController>(out var player))
             {
                 data.position = player.transform.position;
@@ -120,6 +121,7 @@ namespace HollowCreek.Gameplay.Save
             });
             state.Restore(restored.Where(f => f != null).ToList());
             log.Load(data.askedTopics);
+            if (Services.TryGet<ObjectiveTracker>(out var objectives)) objectives.LoadHints(data.hints);
             return catalog.FindById(data.location);
         }
     }

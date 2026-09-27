@@ -23,12 +23,21 @@ namespace HollowCreek.UI.Screens
             scroll = root.Q<ScrollView>("body-scroll");
             continueButton = root.Q<Button>("continue");
             continueButton.clicked += ShowNextOrClose;
+            modals.Changed += TryShowNext;
         }
 
         public void Show(LocalizedString messageTitle, LocalizedString messageBody)
         {
             queue.Enqueue((messageTitle, messageBody));
-            if (!IsOpen) ShowNextOrClose();
+            TryShowNext();
+        }
+
+        /// <summary>Показать следующее сообщение, если сейчас не открыт экран, который нельзя прерывать.</summary>
+        void TryShowNext()
+        {
+            if (IsOpen || queue.Count == 0) return;
+            if (Modals.Top != null && Modals.Top.DefersMessages) return;
+            ShowNextOrClose();
         }
 
         public override void OnBack() => ShowNextOrClose();
@@ -53,6 +62,7 @@ namespace HollowCreek.UI.Screens
         public override void Dispose()
         {
             continueButton.clicked -= ShowNextOrClose;
+            Modals.Changed -= TryShowNext;
             queue.Clear();
             base.Dispose();
         }

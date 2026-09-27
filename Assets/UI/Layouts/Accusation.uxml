@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="accusation" class="layer dim hidden">
+        <ui:VisualElement class="panel accusation__panel">
+            <ui:Label text="@accuse.title" class="title" />
+            <ui:Label text="@accuse.instructions" class="body-text puzzle__instructions" />
+            <ui:Label text="@accuse.suspect" class="section-header" />
+            <ui:VisualElement name="suspects" class="accusation__suspects" />
+            <ui:Label text="@accuse.motive" class="section-header" />
+            <ui:Button name="motive" class="button accusation__slot" />
+            <ui:Label text="@accuse.lie" class="section-header" />
+            <ui:Button name="lie" class="button accusation__slot" />
+            <ui:Label name="accuse-status" class="puzzle__status" />
+            <ui:VisualElement class="message__footer">
+                <ui:Button name="accuse-cancel" text="@accuse.cancel" class="button" />
+                <ui:Button name="accuse-submit" text="@accuse.submit" class="button button--primary" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

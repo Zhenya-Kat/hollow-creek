@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements">
-    <!-- Корень интерфейса игры. Слои идут снизу вверх: HUD, осмотр, дневник, разговор, выбор улики, головоломка, сообщения, затемнение при смене локации. -->
+    <!-- Корень интерфейса игры. Слои идут снизу вверх: HUD, осмотр, дневник, обвинение, подсказки, разговор, выбор улики, головоломка, сообщения, затемнение при смене локации. -->
     <ui:Style src="project://database/Assets/UI/Styles/Game.uss" />
     <ui:Template name="Hud" src="project://database/Assets/UI/Layouts/Hud.uxml" />
     <ui:Template name="Inspection" src="project://database/Assets/UI/Layouts/Inspection.uxml" />
@@ -7,12 +7,16 @@
     <ui:Template name="Dialogue" src="project://database/Assets/UI/Layouts/Dialogue.uxml" />
     <ui:Template name="EvidencePicker" src="project://database/Assets/UI/Layouts/EvidencePicker.uxml" />
     <ui:Template name="Puzzle" src="project://database/Assets/UI/Layouts/Puzzle.uxml" />
+    <ui:Template name="Hint" src="project://database/Assets/UI/Layouts/Hint.uxml" />
+    <ui:Template name="Accusation" src="project://database/Assets/UI/Layouts/Accusation.uxml" />
     <ui:Template name="Message" src="project://database/Assets/UI/Layouts/Message.uxml" />
     <ui:Template name="Fader" src="project://database/Assets/UI/Layouts/Fader.uxml" />
     <ui:VisualElement name="root" class="layer" picking-mode="Ignore">
         <ui:Instance template="Hud" class="layer" picking-mode="Ignore" />
         <ui:Instance template="Inspection" class="layer" picking-mode="Ignore" />
         <ui:Instance template="Notebook" class="layer" picking-mode="Ignore" />
+        <ui:Instance template="Accusation" class="layer" picking-mode="Ignore" />
+        <ui:Instance template="Hint" class="layer" picking-mode="Ignore" />
         <ui:Instance template="Dialogue" class="layer" picking-mode="Ignore" />
         <ui:Instance template="EvidencePicker" class="layer" picking-mode="Ignore" />
         <ui:Instance template="Puzzle" class="layer" picking-mode="Ignore" />

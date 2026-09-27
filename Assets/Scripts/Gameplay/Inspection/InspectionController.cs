@@ -34,6 +34,7 @@ namespace HollowCreek.Gameplay.Inspection
         public event Action<Inspectable> Ended;
 
         InputMode IModal.InputMode => InputMode.Inspect;
+        bool IModal.DefersMessages => true;
 
         void Awake()
         {

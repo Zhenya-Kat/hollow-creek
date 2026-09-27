@@ -22,6 +22,8 @@ namespace HollowCreek.Core.Save
         public float pitch;
         public List<string> facts = new();
         public List<string> askedTopics = new();
+        /// <summary>Сколько подсказок открыто по каждой цели: «id:число».</summary>
+        public List<string> hints = new();
         /// <summary>Когда сохранено (ISO 8601, UTC) — для меню «Продолжить».</summary>
         public string savedAt;
     }

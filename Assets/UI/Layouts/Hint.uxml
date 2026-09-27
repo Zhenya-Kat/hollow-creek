@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="hint-screen" class="layer dim hidden">
+        <ui:VisualElement class="panel message__panel">
+            <ui:Label text="@hint.title" class="title" />
+            <ui:Label name="hint-objective" class="subtitle hint__objective" />
+            <ui:VisualElement name="hint-list" class="hint__list" />
+            <ui:VisualElement class="message__footer">
+                <ui:Button name="hint-close" text="@hint.close" class="button" />
+                <ui:Button name="hint-more" class="button button--primary" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

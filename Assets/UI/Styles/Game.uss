@@ -535,3 +535,98 @@
 .location-title--visible {
     opacity: 1;
 }
+
+/* ---------- Цели, подсказки, обвинение ---------- */
+
+.objective {
+    position: absolute;
+    left: 32px;
+    top: 28px;
+    max-width: 520px;
+    padding: 10px 16px;
+    background-color: rgba(16, 23, 27, 0.72);
+    border-left-width: 3px;
+    border-left-color: var(--color-line);
+    transition-property: opacity, border-left-color, background-color;
+    transition-duration: 0.4s;
+}
+
+.objective--new {
+    border-left-color: var(--color-amber);
+    background-color: rgba(60, 44, 20, 0.85);
+}
+
+.objective--dimmed {
+    opacity: 0;
+}
+
+.objective__header {
+    -unity-font-definition: var(--font-bold);
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--color-amber);
+}
+
+.objective__text {
+    font-size: 19px;
+    white-space: normal;
+}
+
+.notebook__actions {
+    flex-direction: row;
+}
+
+.notebook__actions .button {
+    margin-left: 10px;
+}
+
+.notebook__objectives {
+    padding: 4px 0 10px 0;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--color-line);
+}
+
+.notebook__objective {
+    font-size: 18px;
+    color: var(--color-muted);
+    white-space: normal;
+}
+
+.notebook__objective--current {
+    color: var(--color-cream);
+}
+
+.hint__objective {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.hint__line {
+    border-left-width: 3px;
+    border-left-color: var(--color-amber);
+    padding-left: 12px;
+}
+
+.accusation__panel {
+    width: 60%;
+    max-width: 900px;
+}
+
+.accusation__suspects {
+    flex-direction: row;
+}
+
+.accusation__suspect {
+    margin-right: 12px;
+}
+
+.accusation__suspect--selected {
+    border-color: var(--color-amber);
+    color: var(--color-amber);
+    background-color: rgb(60, 44, 20);
+}
+
+.accusation__slot {
+    -unity-text-align: middle-left;
+    white-space: normal;
+}

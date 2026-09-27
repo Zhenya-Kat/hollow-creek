@@ -179,6 +179,98 @@ MonoBehaviour:
     m_Key: prompt.shine
     m_Metadata:
       m_Items: []
+  - m_Id: 18749619953664
+    m_Key: hud.objective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228352
+    m_Key: notebook.objectives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228353
+    m_Key: notebook.hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228354
+    m_Key: notebook.accuse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228355
+    m_Key: notebook.ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228356
+    m_Key: hint.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228357
+    m_Key: hint.more
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228358
+    m_Key: hint.answer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228359
+    m_Key: hint.answer.confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228360
+    m_Key: hint.none
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228361
+    m_Key: hint.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228362
+    m_Key: accuse.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228363
+    m_Key: accuse.instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749712228364
+    m_Key: accuse.suspect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749716422656
+    m_Key: accuse.motive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749716422657
+    m_Key: accuse.lie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749716422658
+    m_Key: accuse.choose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749716422659
+    m_Key: accuse.submit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749716422660
+    m_Key: accuse.cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749716422661
+    m_Key: accuse.pick.motive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749716422662
+    m_Key: accuse.pick.lie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18749716422663
+    m_Key: accuse.incomplete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20219840946176
+    m_Key: accuse.pick.confirm
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

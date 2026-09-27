@@ -4,8 +4,10 @@ using HollowCreek.Core.Data;
 using HollowCreek.Core.State;
 using HollowCreek.Core.Story;
 using HollowCreek.Gameplay.Locations;
+using HollowCreek.Gameplay.Messages;
 using HollowCreek.Gameplay.Player;
 using HollowCreek.Gameplay.Save;
+using HollowCreek.Gameplay.Story;
 using UnityEngine;
 
 namespace HollowCreek.Gameplay.Bootstrap
@@ -55,6 +57,7 @@ namespace HollowCreek.Gameplay.Bootstrap
                     // Проверка локации из редактора: чистое состояние, настоящее сохранение не трогаем.
                     await locationLoader.LoadAsync(testLocation);
                     saves.Begin(episode, enableAutosave: false);
+                    Services.Get<StoryService>().Begin();
                     return;
                 }
 
@@ -69,8 +72,10 @@ namespace HollowCreek.Gameplay.Bootstrap
                 else
                 {
                     await locationLoader.LoadAsync(episode.StartLocation);
+                    Services.Get<IMessagePresenter>().Show(episode.Title, episode.IntroText);
                 }
                 saves.Begin(episode, enableAutosave: true);
+                Services.Get<StoryService>().Begin();
             }
             catch (Exception e)
             {

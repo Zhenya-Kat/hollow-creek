@@ -3,5 +3,9 @@
         <ui:VisualElement name="crosshair" class="crosshair" picking-mode="Ignore" />
         <ui:Label name="prompt" class="prompt" picking-mode="Ignore" />
         <ui:VisualElement name="toasts" class="toasts" picking-mode="Ignore" />
+        <ui:VisualElement name="objective" class="objective" picking-mode="Ignore">
+            <ui:Label text="@hud.objective" class="objective__header" picking-mode="Ignore" />
+            <ui:Label name="objective-text" class="objective__text" picking-mode="Ignore" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

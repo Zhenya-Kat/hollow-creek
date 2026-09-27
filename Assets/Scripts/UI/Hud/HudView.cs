@@ -1,6 +1,7 @@
 using System;
 using HollowCreek.Core.Facts;
 using HollowCreek.Core.State;
+using HollowCreek.Core.Story;
 using HollowCreek.Gameplay.Input;
 using HollowCreek.Gameplay.Interaction;
 using HollowCreek.Gameplay.Modals;
@@ -17,6 +18,7 @@ namespace HollowCreek.UI.Hud
         const string ToastHiddenClass = "toast--hidden";
         const long ToastLifetimeMs = 3500;
         const long ToastFadeMs = 400;
+        const string ObjectiveNewClass = "objective--new";
 
         readonly VisualElement crosshair;
         readonly Label prompt;
@@ -26,22 +28,32 @@ namespace HollowCreek.UI.Hud
         readonly GameInput input;
         readonly IGameStateReader state;
 
+        readonly VisualElement objectivePanel;
+        readonly Label objectiveText;
+        readonly ObjectiveTracker objectives;
+        Objective shownObjective;
+
         public HudView(VisualElement root, Interactor interactor, ModalStack modals, GameInput input,
-            IGameStateReader state)
+            IGameStateReader state, ObjectiveTracker objectives)
         {
             crosshair = root.Q("crosshair");
             prompt = root.Q<Label>("prompt");
             toasts = root.Q("toasts");
+            objectivePanel = root.Q("objective");
+            objectiveText = root.Q<Label>("objective-text");
             this.interactor = interactor;
             this.modals = modals;
             this.input = input;
             this.state = state;
+            this.objectives = objectives;
 
             interactor.FocusChanged += OnFocusChanged;
             modals.Changed += Refresh;
             input.UsingGamepadChanged += OnDeviceChanged;
             state.FactGranted += OnFactGranted;
+            objectives.Changed += RefreshObjective;
             Refresh();
+            RefreshObjective();
         }
 
         public void Dispose()
@@ -50,6 +62,19 @@ namespace HollowCreek.UI.Hud
             modals.Changed -= Refresh;
             input.UsingGamepadChanged -= OnDeviceChanged;
             state.FactGranted -= OnFactGranted;
+            objectives.Changed -= RefreshObjective;
+        }
+
+        void RefreshObjective()
+        {
+            var current = objectives.Current;
+            objectivePanel.EnableInClassList(ScreenView.HiddenClass, current == null);
+            if (current == null || current == shownObjective) return;
+            shownObjective = current;
+            objectiveText.text = UIText.Get(current.Text);
+            // Новая цель коротко подсвечивается.
+            objectivePanel.AddToClassList(ObjectiveNewClass);
+            objectivePanel.schedule.Execute(() => objectivePanel.RemoveFromClassList(ObjectiveNewClass)).StartingIn(1500);
         }
 
         void OnFocusChanged(Interactable _) => Refresh();
@@ -58,6 +83,7 @@ namespace HollowCreek.UI.Hud
         void Refresh()
         {
             var inGameplay = modals.IsEmpty;
+            objectivePanel.EnableInClassList("objective--dimmed", !inGameplay);
             crosshair.EnableInClassList(ScreenView.HiddenClass, !inGameplay);
 
             var target = inGameplay ? interactor.Current : null;

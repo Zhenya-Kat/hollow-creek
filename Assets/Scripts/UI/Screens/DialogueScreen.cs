@@ -54,6 +54,8 @@ namespace HollowCreek.UI.Screens
             base.Dispose();
         }
 
+        public override bool DefersMessages => true;
+
         public override void OnBack()
         {
             // Первое нажатие Esc дописывает реплику, второе — завершает разговор.
@@ -109,7 +111,7 @@ namespace HollowCreek.UI.Screens
         }
 
         void OnPresentClicked() =>
-            picker.Pick("evidence.title", includeItems: false, OnEvidencePicked);
+            picker.Pick("evidence.title", "evidence.confirm", includeItems: false, OnEvidencePicked);
 
         void OnEvidencePicked(FactDefinition evidence)
         {

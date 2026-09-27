@@ -29,14 +29,23 @@ namespace HollowCreek.UI.Screens
             cancelButton = root.Q<Button>("cancel");
             confirmButton.clicked += Confirm;
             cancelButton.clicked += Close;
-            facts.Submitted += _ => Confirm();
+            // Enter/«A» на записи подтверждает именно её, а не ранее выделенную.
+            facts.Submitted += fact =>
+            {
+                facts.Select(fact);
+                Confirm();
+            };
         }
 
-        /// <summary>Открыть выбор. <paramref name="picked"/> вызывается только если игрок что-то выбрал.</summary>
-        public void Pick(string titleKey, bool includeItems, Action<FactDefinition> picked)
+        /// <summary>
+        /// Открыть выбор. <paramref name="picked"/> вызывается только если игрок что-то выбрал.
+        /// <paramref name="confirmKey"/> — подпись кнопки подтверждения («Предъявить», «Выбрать»).
+        /// </summary>
+        public void Pick(string titleKey, string confirmKey, bool includeItems, Action<FactDefinition> picked)
         {
             onPicked = picked;
             title.text = UIText.Get(titleKey);
+            confirmButton.text = UIText.Get(confirmKey);
             Open();
             var any = facts.Build(state, includeItems);
             confirmButton.SetEnabled(any);

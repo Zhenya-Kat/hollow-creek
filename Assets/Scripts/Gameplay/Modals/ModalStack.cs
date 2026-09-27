@@ -15,6 +15,12 @@ namespace HollowCreek.Gameplay.Modals
 
         /// <summary>Игрок нажал «Назад» (Esc), и этот модал сверху. Обычно — закрыться.</summary>
         void OnBack();
+
+        /// <summary>
+        /// Не прерывать этот модал всплывающими сообщениями (например, звонком шерифа посреди разговора):
+        /// сообщение подождёт, пока модал закроется.
+        /// </summary>
+        bool DefersMessages => false;
     }
 
     /// <summary>

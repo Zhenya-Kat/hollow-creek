@@ -72,6 +72,7 @@ namespace HollowCreek.Core.Save
         {
             data.facts ??= new();
             data.askedTopics ??= new();
+            data.hints ??= new();
             data.version = SaveData.CurrentVersion;
         }
     }

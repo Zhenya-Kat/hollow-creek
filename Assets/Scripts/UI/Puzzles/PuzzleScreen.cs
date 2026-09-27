@@ -110,6 +110,8 @@ namespace HollowCreek.UI.Puzzles
             }).StartingIn(SolvedDelayMs);
         }
 
+        public override bool DefersMessages => true;
+
         public override void OnBack()
         {
             if (!solved) Close();

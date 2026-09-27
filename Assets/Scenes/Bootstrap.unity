@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 219853199}
   - component: {fileID: 219853200}
   - component: {fileID: 219853201}
+  - component: {fileID: 219853202}
   m_Layer: 0
   m_Name: '[Game]'
   m_TagString: Untagged
@@ -416,6 +417,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Save.SaveService
   autosaveDelay: 0.5
+--- !u!114 &219853202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219853192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c23d6af3af9ed64d804411edf2227b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Story.StoryService
 --- !u!1 &275290156
 GameObject:
   m_ObjectHideFlags: 0

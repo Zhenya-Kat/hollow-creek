@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using HollowCreek.Core;
 using HollowCreek.Core.Puzzles;
 using HollowCreek.Core.State;
+using HollowCreek.Core.Story;
 using HollowCreek.Gameplay.Dialogue;
 using HollowCreek.Gameplay.Puzzles;
 using HollowCreek.UI.Puzzles;
@@ -41,13 +42,23 @@ namespace HollowCreek.UI
             var input = Services.Get<GameInput>();
             var state = Services.Get<GameState>();
 
+            var objectives = Services.Get<ObjectiveTracker>();
+
+            // Сообщения создаются первыми: ими пользуются другие экраны.
+            messages = new MessageScreen(root.Q("message"), modals);
+            views.Add(messages);
             views.Add(new StaticTextLocalizer(root));
             views.Add(new LocationTransitionView(root.Q("fader"), root.Q<Label>("location-title"), Services.Get<LocationLoader>()));
-            views.Add(new HudView(root.Q("hud"), Services.Get<Interactor>(), modals, input, state));
+            views.Add(new HudView(root.Q("hud"), Services.Get<Interactor>(), modals, input, state, objectives));
             views.Add(new InspectionOverlay(root.Q("inspection"), Services.Get<InspectionController>(), input));
-            views.Add(new NotebookScreen(root.Q("notebook"), modals, input, state));
             var picker = new EvidencePickerScreen(root.Q("evidence-picker"), modals, state);
             views.Add(picker);
+            var hints = new HintScreen(root.Q("hint-screen"), modals, objectives);
+            views.Add(hints);
+            var accusation = new AccusationScreen(root.Q("accusation"), modals, Services.Get<CaseService>(), picker, messages);
+            views.Add(accusation);
+            views.Add(new NotebookScreen(root.Q("notebook"), modals, input, state, objectives,
+                Services.Get<CaseService>(), hints, accusation, messages));
             views.Add(new DialogueScreen(root.Q("dialogue"), modals, Services.Get<DialogueService>(), picker));
             views.Add(new PuzzleScreen(root.Q("puzzle"), modals, Services.Get<PuzzleService>(),
                 new Dictionary<Type, Func<IPuzzleView>>
@@ -56,8 +67,6 @@ namespace HollowCreek.UI
                     [typeof(SequencePuzzle)] = () => new SequenceView(),
                     [typeof(RubbingPuzzle)] = () => new RubbingView(input),
                 }));
-            messages = new MessageScreen(root.Q("message"), modals);
-            views.Add(messages);
             Services.Register<IMessagePresenter>(messages);
         }
 

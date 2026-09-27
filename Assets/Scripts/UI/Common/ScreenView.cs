@@ -28,6 +28,11 @@ namespace HollowCreek.UI.Common
 
         public virtual InputMode InputMode => InputMode.UI;
 
+        /// <summary>См. <see cref="IModal.DefersMessages"/>.</summary>
+        public virtual bool DefersMessages => false;
+
+        bool IModal.DefersMessages => DefersMessages;
+
         public void Open()
         {
             if (!IsOpen)
