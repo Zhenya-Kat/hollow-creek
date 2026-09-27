@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Clues Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Clues
+  m_TableCollectionNameGuidString: cabdac003c1bab94ca82cf3024a41c60
+  m_Entries:
+  - m_Id: 456122368
+    m_Key: poster.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979968
+    m_Key: poster.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979969
+    m_Key: poster.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 758112256
+    m_Key: route.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 762306560
+    m_Key: route.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 762306561
+    m_Key: route.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 938467328
+    m_Key: safe_note.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 938467329
+    m_Key: safe_note.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 938467330
+    m_Key: safe_note.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1106239488
+    m_Key: watch.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1106239489
+    m_Key: watch.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1106239490
+    m_Key: watch.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1282400256
+    m_Key: receipt.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1282400257
+    m_Key: receipt.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1282400258
+    m_Key: receipt.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458561024
+    m_Key: candlestick.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458561025
+    m_Key: candlestick.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1458561026
+    m_Key: candlestick.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1634721792
+    m_Key: mara_debt.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1634721793
+    m_Key: mara_debt.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1634721794
+    m_Key: mara_debt.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806688256
+    m_Key: owen_claim.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806688257
+    m_Key: owen_claim.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1806688258
+    m_Key: owen_claim.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1978654720
+    m_Key: reed_alibi.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1978654721
+    m_Key: reed_alibi.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1978654722
+    m_Key: reed_alibi.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2150621184
+    m_Key: outage.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2150621185
+    m_Key: outage.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2150621186
+    m_Key: outage.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2314199040
+    m_Key: pharmacy.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2314199041
+    m_Key: pharmacy.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2314199042
+    m_Key: pharmacy.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2486165504
+    m_Key: ledger.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2486165505
+    m_Key: ledger.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2486165506
+    m_Key: ledger.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2649743360
+    m_Key: letter.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2649743361
+    m_Key: letter.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2649743362
+    m_Key: letter.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2817515520
+    m_Key: desk.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2817515521
+    m_Key: desk.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2817515522
+    m_Key: desk.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2985287680
+    m_Key: tape.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2985287681
+    m_Key: tape.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2985287682
+    m_Key: tape.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3148865536
+    m_Key: reed_voice.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3148865537
+    m_Key: reed_voice.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3148865538
+    m_Key: reed_voice.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3316637696
+    m_Key: dark_car.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3316637697
+    m_Key: dark_car.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3316637698
+    m_Key: dark_car.text
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 547263845907824832
+  references:
+    version: 2
+    RefIds:
+    - rid: 547263845907824832
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1790522990800

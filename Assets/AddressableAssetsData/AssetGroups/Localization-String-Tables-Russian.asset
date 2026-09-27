@@ -22,8 +22,36 @@ MonoBehaviour:
     - Locale-ru
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c44f396336202546a61d012b301902f
+    m_Address: Story_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df2c506e17dd93343900593bca0d074f
+    m_Address: Dialogue_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e5aa832eb1b8d264083c4d646c53893a
     m_Address: UI_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f009383fa22e76142834fa49ce246fd0
+    m_Address: Items_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fda17a7ac48cbc3479d7d98c6c293a7e
+    m_Address: Clues_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru

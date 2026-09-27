@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47318857f42d2db408d8693a50102dcc, type: 3}
+  m_Name: Character_Owen
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Dialogue.CharacterDefinition
+  id: 82490bfbc4e085e49ad7720e6a347f20
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+    m_TableEntryReference:
+      m_KeyId: 560979968
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  role:
+    m_TableReference:
+      m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+    m_TableEntryReference:
+      m_KeyId: 560979969
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  greeting:
+    m_TableReference:
+      m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+    m_TableEntryReference:
+      m_KeyId: 560979970
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  metFact: {fileID: 11400000, guid: 3d0983a97dfed3d42a1bcb49fab59dd2, type: 2}
+  topics:
+  - id: house
+    question:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979972
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    answer:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979973
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    availableWhen:
+      rid: -2
+    onAsked:
+    - rid: 547263845907824840
+  - id: threat
+    question:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979974
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    answer:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979975
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    availableWhen:
+      rid: -2
+    onAsked: []
+  - id: where
+    question:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979976
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    answer:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979977
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    availableWhen:
+      rid: -2
+    onAsked: []
+  - id: box
+    question:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979978
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    answer:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979979
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    availableWhen:
+      rid: 547263845907824841
+    onAsked: []
+  reactions:
+  - id: letter
+    evidence: {fileID: 11400000, guid: 7a92ca34a44cb9640b1f9cec2a8dd205, type: 2}
+    response:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979980
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    availableWhen:
+      rid: -2
+    onPresented:
+    - rid: 547263845907824844
+  - id: watch
+    evidence: {fileID: 11400000, guid: 6c6823c2a753e4d428c0d95660a1b50f, type: 2}
+    response:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979981
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    availableWhen:
+      rid: -2
+    onPresented: []
+  - id: candlestick
+    evidence: {fileID: 11400000, guid: ba2abe0825747354e9250e1eb180f03a, type: 2}
+    response:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979982
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    availableWhen:
+      rid: -2
+    onPresented: []
+  - id: ledger
+    evidence: {fileID: 11400000, guid: 33db6fd284289ce4e843506e5d8f4668, type: 2}
+    response:
+      m_TableReference:
+        m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+      m_TableEntryReference:
+        m_KeyId: 560979983
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    availableWhen:
+      rid: -2
+    onPresented: []
+  defaultReaction:
+    m_TableReference:
+      m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+    m_TableEntryReference:
+      m_KeyId: 560979971
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 547263845907824840
+      type: {class: GrantFactAction, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: d27327a73af76504c80b205a781c6972, type: 2}
+    - rid: 547263845907824841
+      type: {class: AnyOf, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        conditions:
+        - rid: 547263845907824842
+        - rid: 547263845907824843
+    - rid: 547263845907824842
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 5cd6b8b2b3962034b9a0be98dadeb860, type: 2}
+    - rid: 547263845907824843
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: c197d81e3a937b04e95078e3ec88d9e8, type: 2}
+    - rid: 547263845907824844
+      type: {class: GrantFactAction, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: c5b99cd4d54305d428d0acadf15a5dc0, type: 2}

@@ -37,6 +37,11 @@ namespace HollowCreek.Core.Logic
     {
         [SerializeField] FactDefinition fact;
 
+        public GrantFactAction() { }
+        public GrantFactAction(FactDefinition fact) => this.fact = fact;
+
+        public FactDefinition Fact => fact;
+
         public override void Execute(in ActionContext context)
         {
             if (fact == null)

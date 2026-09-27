@@ -5,7 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "HollowCreek.Core",
-        "HollowCreek.Gameplay"
+        "HollowCreek.Gameplay",
+        "Unity.Localization"
     ],
     "includePlatforms": [
         "Editor"

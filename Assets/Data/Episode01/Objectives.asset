@@ -1,0 +1,507 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddad699c4285da94684e2e8901048834, type: 3}
+  m_Name: Objectives
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Story.ObjectiveSet
+  objectives:
+  - id: street
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 212852736
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: -2
+    completeWhen:
+      rid: 547263845907824849
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544512
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544513
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544514
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - id: study
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544515
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: -2
+    completeWhen:
+      rid: 547263845907824852
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544516
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544517
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544518
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - id: suspects
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544519
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: -2
+    completeWhen:
+      rid: 547263845907824856
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 292544520
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738816
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738817
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - id: safe
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738818
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: 547263845907824860
+    completeWhen:
+      rid: 547263845907824861
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738819
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738820
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738821
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - id: box
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738822
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: 547263845907824862
+    completeWhen:
+      rid: 547263845907824863
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738823
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738825
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - id: desk
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738826
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: 547263845907824864
+    completeWhen:
+      rid: 547263845907824865
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738827
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738828
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738829
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - id: alibi
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738830
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: 547263845907824866
+    completeWhen:
+      rid: 547263845907824867
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738831
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738832
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738833
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - id: accuse
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738834
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: 547263845907824868
+    completeWhen:
+      rid: 547263845907824877
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 296738835
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 300933120
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 300933121
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - id: epilogue
+    text:
+      m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 300933122
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    activeWhen:
+      rid: 547263845907824878
+    completeWhen:
+      rid: -2
+    hints:
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 300933123
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 300933124
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: GUID:55efdcf0114ad28428f7aa9433a157a5
+      m_TableEntryReference:
+        m_KeyId: 300933125
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 547263845907824849
+      type: {class: AllOf, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        conditions:
+        - rid: 547263845907824850
+        - rid: 547263845907824851
+    - rid: 547263845907824850
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 115bbeaf00787c744a94a825e57030f7, type: 2}
+    - rid: 547263845907824851
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 5cd6b8b2b3962034b9a0be98dadeb860, type: 2}
+    - rid: 547263845907824852
+      type: {class: AllOf, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        conditions:
+        - rid: 547263845907824853
+        - rid: 547263845907824854
+        - rid: 547263845907824855
+    - rid: 547263845907824853
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 6c6823c2a753e4d428c0d95660a1b50f, type: 2}
+    - rid: 547263845907824854
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 730e59c93a7eb5140a4ea1cc2efcb3ad, type: 2}
+    - rid: 547263845907824855
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: ba2abe0825747354e9250e1eb180f03a, type: 2}
+    - rid: 547263845907824856
+      type: {class: AllOf, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        conditions:
+        - rid: 547263845907824857
+        - rid: 547263845907824858
+        - rid: 547263845907824859
+    - rid: 547263845907824857
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 67e747917602d7c49ba0921bcc584c84, type: 2}
+    - rid: 547263845907824858
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 3d0983a97dfed3d42a1bcb49fab59dd2, type: 2}
+    - rid: 547263845907824859
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 647c68a503741dd4887e5a41415f9abb, type: 2}
+    - rid: 547263845907824860
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: b67a05ce020b18e4481078316146c7aa, type: 2}
+    - rid: 547263845907824861
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 86aafae45b608a94baa03ad99b089f58, type: 2}
+    - rid: 547263845907824862
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: c197d81e3a937b04e95078e3ec88d9e8, type: 2}
+    - rid: 547263845907824863
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 55029ac35814e774ea601842ba0da07b, type: 2}
+    - rid: 547263845907824864
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 6c6823c2a753e4d428c0d95660a1b50f, type: 2}
+    - rid: 547263845907824865
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 03a9eb393d97d2a45aee121e55367251, type: 2}
+    - rid: 547263845907824866
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 82ed13ba9b459454e85520c3d9c60aad, type: 2}
+    - rid: 547263845907824867
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 55b637f7b6afa5c48809862884cd8077, type: 2}
+    - rid: 547263845907824868
+      type: {class: AllOf, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        conditions:
+        - rid: 547263845907824869
+        - rid: 547263845907824870
+        - rid: 547263845907824871
+        - rid: 547263845907824872
+        - rid: 547263845907824873
+        - rid: 547263845907824874
+        - rid: 547263845907824875
+        - rid: 547263845907824876
+    - rid: 547263845907824869
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 6c6823c2a753e4d428c0d95660a1b50f, type: 2}
+    - rid: 547263845907824870
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 715cc14d28a972145aceb780cbce1a61, type: 2}
+    - rid: 547263845907824871
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: d27327a73af76504c80b205a781c6972, type: 2}
+    - rid: 547263845907824872
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 82ed13ba9b459454e85520c3d9c60aad, type: 2}
+    - rid: 547263845907824873
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 55b637f7b6afa5c48809862884cd8077, type: 2}
+    - rid: 547263845907824874
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 33db6fd284289ce4e843506e5d8f4668, type: 2}
+    - rid: 547263845907824875
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 7a92ca34a44cb9640b1f9cec2a8dd205, type: 2}
+    - rid: 547263845907824876
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 03a9eb393d97d2a45aee121e55367251, type: 2}
+    - rid: 547263845907824877
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 6f33ea0940319264ba1a5b6287697001, type: 2}
+    - rid: 547263845907824878
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 6f33ea0940319264ba1a5b6287697001, type: 2}

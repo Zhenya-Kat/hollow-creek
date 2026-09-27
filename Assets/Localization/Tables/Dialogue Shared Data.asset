@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Dialogue Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Dialogue
+  m_TableCollectionNameGuidString: 4841907fde87b9c49b2deb249a14e36c
+  m_Entries:
+  - m_Id: 200269824
+    m_Key: mara.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 279961600
+    m_Key: mara.role
+    m_Metadata:
+      m_Items: []
+  - m_Id: 279961601
+    m_Key: mara.greeting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 279961602
+    m_Key: mara.default
+    m_Metadata:
+      m_Items: []
+  - m_Id: 284155904
+    m_Key: mara.q.quarrel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 284155905
+    m_Key: mara.a.quarrel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350208
+    m_Key: mara.q.left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350209
+    m_Key: mara.a.left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350210
+    m_Key: mara.q.alice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350211
+    m_Key: mara.a.alice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292544512
+    m_Key: mara.q.box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292544513
+    m_Key: mara.a.box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 389013504
+    m_Key: mara.r.receipt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 389013505
+    m_Key: mara.r.tape
+    m_Metadata:
+      m_Items: []
+  - m_Id: 389013506
+    m_Key: mara.r.candlestick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 389013507
+    m_Key: mara.r.watch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979968
+    m_Key: owen.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979969
+    m_Key: owen.role
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979970
+    m_Key: owen.greeting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979971
+    m_Key: owen.default
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979972
+    m_Key: owen.q.house
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979973
+    m_Key: owen.a.house
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979974
+    m_Key: owen.q.threat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979975
+    m_Key: owen.a.threat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979976
+    m_Key: owen.q.where
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979977
+    m_Key: owen.a.where
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979978
+    m_Key: owen.q.box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979979
+    m_Key: owen.a.box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979980
+    m_Key: owen.r.letter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979981
+    m_Key: owen.r.watch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979982
+    m_Key: owen.r.candlestick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979983
+    m_Key: owen.r.ledger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723648
+    m_Key: reed.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723649
+    m_Key: reed.role
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723650
+    m_Key: reed.greeting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723651
+    m_Key: reed.default
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723652
+    m_Key: reed.q.alibi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723653
+    m_Key: reed.a.alibi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723654
+    m_Key: reed.q.alice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723655
+    m_Key: reed.a.alice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723656
+    m_Key: reed.q.papers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723657
+    m_Key: reed.a.papers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723658
+    m_Key: reed.r.pharmacy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723659
+    m_Key: reed.r.outage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723660
+    m_Key: reed.r.ledger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723661
+    m_Key: reed.r.reed_voice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723662
+    m_Key: reed.r.dark_car
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 547263845907824834
+  references:
+    version: 2
+    RefIds:
+    - rid: 547263845907824834
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1790522992139

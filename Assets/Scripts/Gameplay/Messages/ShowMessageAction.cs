@@ -20,6 +20,14 @@ namespace HollowCreek.Gameplay.Messages
         [SerializeField] LocalizedString title;
         [SerializeField] LocalizedString body;
 
+        public ShowMessageAction() { }
+
+        public ShowMessageAction(LocalizedString title, LocalizedString body)
+        {
+            this.title = title;
+            this.body = body;
+        }
+
         public override void Execute(in ActionContext context) =>
             Services.Get<IMessagePresenter>().Show(title, body);
     }
