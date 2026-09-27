@@ -70,7 +70,7 @@ git clone <url-репозитория>
 
 1. Unity Hub → **Add** → **Add project from disk** → выбрать папку проекта.
 2. Первое открытие долгое: Unity заново собирает папку `Library`. Это нормально.
-3. Если открылась пустая сцена `Untitled` — открыть нужную из `Assets/Scenes`.
+3. При первом открытии проект сам открывает сцену `Assets/Scenes/Bootstrap.unity` (если вдруг открылась пустая `Untitled` — откройте её вручную).
 4. Edit → Preferences → External Tools → **External Script Editor** — выбрать свою IDE.
 
 ## Работа с репозиторием
@@ -93,4 +93,5 @@ git clone <url-репозитория>
 |---|---|
 | Модели розовые / текстуры не открываются | Не скачались LFS-файлы: `git lfs pull` |
 | Unity предлагает обновить проект | Установлена другая версия редактора — поставьте 6000.6.3f1 |
+| Сборка падает: «Copying …/WindowsPlayer.exe … не удается найти указанный путь» | Не установлен или повреждён модуль сборки под Windows: Unity Hub → Installs → 6000.6.3f1 → ⚙ → Add modules → **Windows Build Support (Mono)**. Если модуль есть, файл мог удалить антивирус — переустановите модуль и добавьте папку Unity в исключения |
 | IDE не подсвечивает Unity API | Проверьте External Script Editor в настройках Unity, затем Assets → Open C# Project |

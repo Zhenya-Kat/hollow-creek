@@ -60,3 +60,6 @@ Desktop.ini
 
 # Результаты сборки Addressables
 /[Ss]erver[Dd]ata/
+# Addressables пересоздаёт этот файл при каждой сборке игры
+/Assets/AddressableAssetsData/link.xml
+/Assets/AddressableAssetsData/link.xml.meta
