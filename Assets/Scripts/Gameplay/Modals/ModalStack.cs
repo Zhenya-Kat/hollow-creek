@@ -37,7 +37,7 @@ namespace HollowCreek.Gameplay.Modals
         /// <summary>Состав стека изменился.</summary>
         public event Action Changed;
 
-        /// <summary>«Назад» нажато, когда ничего не открыто (сюда подключится меню паузы).</summary>
+        /// <summary>«Назад» нажато, когда ничего не открыто (открывает меню паузы).</summary>
         public event Action BackPressedInGameplay;
 
         public IModal Top => stack.Count > 0 ? stack[^1] : null;
@@ -69,10 +69,11 @@ namespace HollowCreek.Gameplay.Modals
             Changed?.Invoke();
         }
 
-        void OnBackPerformed(InputAction.CallbackContext _)
+        void OnBackPerformed(InputAction.CallbackContext context)
         {
             if (Top != null) Top.OnBack();
-            else BackPressedInGameplay?.Invoke();
+            // Правая кнопка мыши закрывает окна, но паузу во время ходьбы не ставит — только Esc и геймпад.
+            else if (context.control?.device is not Mouse) BackPressedInGameplay?.Invoke();
         }
     }
 }
