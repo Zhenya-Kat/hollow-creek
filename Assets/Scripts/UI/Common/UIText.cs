@@ -14,6 +14,10 @@ namespace HollowCreek.UI.Common
         public static string Get(string key) =>
             LocalizationSettings.StringDatabase.GetLocalizedString(Table, key);
 
+        /// <summary>Текст по ключу или null, если такой записи в таблице нет.</summary>
+        public static string Find(string key) =>
+            LocalizationSettings.StringDatabase.GetTable(Table)?.GetEntry(key)?.GetLocalizedString();
+
         public static string Format(string key, params object[] args) => string.Format(Get(key), args);
 
         public static string Get(LocalizedString text) =>

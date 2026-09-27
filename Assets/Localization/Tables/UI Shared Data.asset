@@ -271,6 +271,158 @@ MonoBehaviour:
     m_Key: accuse.pick.confirm
     m_Metadata:
       m_Items: []
+  - m_Id: 64921978003456
+    m_Key: common.cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889536
+    m_Key: menu.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889537
+    m_Key: menu.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889538
+    m_Key: menu.continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889539
+    m_Key: menu.new
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889540
+    m_Key: menu.settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889541
+    m_Key: menu.credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889542
+    m_Key: menu.quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889543
+    m_Key: menu.new.confirm.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889544
+    m_Key: menu.new.confirm.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889545
+    m_Key: menu.new.confirm.yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889546
+    m_Key: menu.quit.confirm.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889547
+    m_Key: pause.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922061889548
+    m_Key: pause.resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083840
+    m_Key: pause.menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083841
+    m_Key: pause.menu.confirm.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083842
+    m_Key: pause.quit.confirm.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083843
+    m_Key: pause.saved.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083844
+    m_Key: confirm.quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083845
+    m_Key: settings.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083846
+    m_Key: settings.section.sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083847
+    m_Key: settings.section.controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083848
+    m_Key: settings.section.video
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083849
+    m_Key: settings.master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083850
+    m_Key: settings.effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083851
+    m_Key: settings.ambience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083852
+    m_Key: settings.interface
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083853
+    m_Key: settings.sensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083854
+    m_Key: settings.invert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083855
+    m_Key: settings.fov
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083856
+    m_Key: settings.fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083857
+    m_Key: settings.quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083858
+    m_Key: settings.reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083859
+    m_Key: settings.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083860
+    m_Key: quality.Mobile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083861
+    m_Key: quality.PC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083862
+    m_Key: credits.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64922066083863
+    m_Key: credits.text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

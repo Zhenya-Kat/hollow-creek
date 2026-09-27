@@ -11,8 +11,10 @@ using HollowCreek.Gameplay.Input;
 using HollowCreek.Gameplay.Inspection;
 using HollowCreek.Gameplay.Interaction;
 using HollowCreek.Gameplay.Locations;
+using HollowCreek.Gameplay.Menus;
 using HollowCreek.Gameplay.Messages;
 using HollowCreek.Gameplay.Modals;
+using HollowCreek.Gameplay.Settings;
 using HollowCreek.UI.Common;
 using HollowCreek.UI.Hud;
 using HollowCreek.UI.Screens;
@@ -31,6 +33,7 @@ namespace HollowCreek.UI
     {
         readonly List<IDisposable> views = new();
         MessageScreen messages;
+        MainMenuScreen mainMenu;
 
         void Start()
         {
@@ -70,12 +73,24 @@ namespace HollowCreek.UI
                     [typeof(SequencePuzzle)] = () => new SequenceView(),
                     [typeof(RubbingPuzzle)] = () => new RubbingView(input),
                 }));
+
+            var pause = Services.Get<PauseService>();
+            var confirm = new ConfirmScreen(root.Q("confirm-screen"), modals);
+            views.Add(confirm);
+            var settings = new SettingsScreen(root.Q("settings-screen"), modals, Services.Get<SettingsService>());
+            views.Add(settings);
+            views.Add(new PauseScreen(root.Q("pause-screen"), modals, pause, settings, confirm));
+            mainMenu = new MainMenuScreen(root.Q("main-menu"), modals, confirm, settings, messages, pause);
+            views.Add(mainMenu);
+
             Services.Register<IMessagePresenter>(messages);
+            Services.Register<IMainMenu>(mainMenu);
         }
 
         void OnDestroy()
         {
             if (messages != null) Services.Unregister<IMessagePresenter>(messages);
+            if (mainMenu != null) Services.Unregister<IMainMenu>(mainMenu);
             foreach (var view in views) view.Dispose();
             views.Clear();
         }

@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="confirm-screen" class="layer dim hidden">
+        <ui:VisualElement class="panel confirm__panel">
+            <ui:Label name="confirm-title" class="title" />
+            <ui:Label name="confirm-text" class="body-text" />
+            <ui:VisualElement class="confirm__footer">
+                <ui:Button name="confirm-no" class="button" />
+                <ui:Button name="confirm-yes" class="button button--primary" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

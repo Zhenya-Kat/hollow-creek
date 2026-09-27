@@ -4,6 +4,7 @@ using HollowCreek.Core.Data;
 using HollowCreek.Core.State;
 using HollowCreek.Core.Story;
 using HollowCreek.Gameplay.Locations;
+using HollowCreek.Gameplay.Menus;
 using HollowCreek.Gameplay.Messages;
 using HollowCreek.Gameplay.Player;
 using HollowCreek.Gameplay.Save;
@@ -51,31 +52,40 @@ namespace HollowCreek.Gameplay.Bootstrap
             try
             {
                 var saves = Services.Get<SaveService>();
+                var pause = Services.Get<PauseService>();
                 var testLocation = EditorTestLocation();
                 if (testLocation != null)
                 {
-                    // Проверка локации из редактора: чистое состояние, настоящее сохранение не трогаем.
+                    // Проверка локации из редактора: без меню, чистое состояние, настоящее сохранение не трогаем.
                     await locationLoader.LoadAsync(testLocation);
                     saves.Begin(episode, enableAutosave: false);
                     Services.Get<StoryService>().Begin();
+                    pause.Enabled = true;
                     return;
                 }
 
+                // Стартовая локация — фон для главного меню.
+                await locationLoader.LoadAsync(episode.StartLocation);
                 var save = saves.Store.Read();
-                if (save != null && save.episode == episode.Id)
+                var canContinue = save != null && save.episode == episode.Id;
+                var choice = await (await WaitForService<IMainMenu>()).ShowAsync(canContinue);
+
+                if (choice == MainMenuChoice.Continue && canContinue)
                 {
                     var location = saves.Apply(save, episode, locationCatalog) ?? episode.StartLocation;
-                    await locationLoader.LoadAsync(location);
+                    if (locationLoader.Current == null || locationLoader.Current.Location != location)
+                        await locationLoader.LoadAsync(location);
                     if (save.location == location.Id && Services.TryGet<PlayerController>(out var player))
                         player.Teleport(save.position, save.yaw, save.pitch);
                 }
                 else
                 {
-                    await locationLoader.LoadAsync(episode.StartLocation);
+                    saves.Store.Delete();
                     Services.Get<IMessagePresenter>().Show(episode.Title, episode.IntroText);
                 }
                 saves.Begin(episode, enableAutosave: true);
                 Services.Get<StoryService>().Begin();
+                pause.Enabled = true;
             }
             catch (Exception e)
             {
@@ -83,6 +93,13 @@ namespace HollowCreek.Gameplay.Bootstrap
             }
         }
 
+        /// <summary>Интерфейс регистрирует свои сервисы в Start — ждём, пока он будет готов.</summary>
+        static async Awaitable<T> WaitForService<T>() where T : class
+        {
+            T service;
+            while (!Services.TryGet(out service)) await Awaitable.NextFrameAsync();
+            return service;
+        }
         /// <summary>Локация, открытая в редакторе перед нажатием Play (null — обычный запуск).</summary>
         LocationDefinition EditorTestLocation()
         {

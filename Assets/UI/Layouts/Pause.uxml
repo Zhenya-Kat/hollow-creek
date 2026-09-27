@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="pause-screen" class="layer dim hidden">
+        <ui:VisualElement class="panel pause__panel">
+            <ui:Label text="@pause.title" class="title" />
+            <ui:VisualElement class="menu-buttons">
+                <ui:Button name="pause-resume" text="@pause.resume" class="button menu-button" />
+                <ui:Button name="pause-settings" text="@menu.settings" class="button menu-button" />
+                <ui:Button name="pause-menu" text="@pause.menu" class="button menu-button" />
+                <ui:Button name="pause-quit" text="@menu.quit" class="button menu-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

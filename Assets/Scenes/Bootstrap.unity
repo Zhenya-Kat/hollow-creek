@@ -288,6 +288,8 @@ GameObject:
   - component: {fileID: 219853201}
   - component: {fileID: 219853202}
   - component: {fileID: 219853203}
+  - component: {fileID: 219853205}
+  - component: {fileID: 219853204}
   m_Layer: 0
   m_Name: '[Game]'
   m_TagString: Untagged
@@ -445,6 +447,30 @@ MonoBehaviour:
   cues: {fileID: 11400000, guid: 8013760f7fc37254298d9bc1ef51ef63, type: 2}
   voices: 12
   ambienceFade: 1.5
+--- !u!114 &219853204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219853192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c635ccf015e9e934db600f23d36fde34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Settings.SettingsService
+--- !u!114 &219853205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219853192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5d61f73bd193044947cc8e5177ccb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Menus.PauseService
 --- !u!1 &275290156
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Player.PlayerController
   head: {fileID: 1281727263}
+  firstPersonCamera: {fileID: 74541726}
   walkSpeed: 3
   sprintSpeed: 5
   acceleration: 14

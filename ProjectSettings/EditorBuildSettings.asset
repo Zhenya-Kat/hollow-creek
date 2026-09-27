@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Locations/Diner.unity
     guid: 45806c8b67a47f64796c8073f0db897a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Locations/Sandbox.unity
     guid: 74ff80dcc941cf64fadc0ae4d534ff0e
   m_configObjects:

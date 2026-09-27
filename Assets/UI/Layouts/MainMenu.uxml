@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="main-menu" class="layer main-menu hidden">
+        <ui:VisualElement class="main-menu__column">
+            <ui:Label text="@menu.title" class="main-menu__title" />
+            <ui:Label text="@menu.subtitle" class="main-menu__subtitle" />
+            <ui:VisualElement class="menu-buttons">
+                <ui:Button name="menu-continue" text="@menu.continue" class="button menu-button" />
+                <ui:Button name="menu-new" text="@menu.new" class="button menu-button" />
+                <ui:Button name="menu-settings" text="@menu.settings" class="button menu-button" />
+                <ui:Button name="menu-credits" text="@menu.credits" class="button menu-button" />
+                <ui:Button name="menu-quit" text="@menu.quit" class="button menu-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements">
-    <!-- Корень интерфейса игры. Слои идут снизу вверх: HUD, осмотр, дневник, обвинение, подсказки, разговор, выбор улики, головоломка, сообщения, затемнение при смене локации. -->
+    <!-- Корень интерфейса игры. Слои идут снизу вверх: HUD, осмотр, дневник, обвинение, подсказки, разговор, выбор улики, головоломка, главное меню, пауза, настройки, сообщения, подтверждение, затемнение при смене локации. -->
     <ui:Style src="project://database/Assets/UI/Styles/Game.uss" />
     <ui:Template name="Hud" src="project://database/Assets/UI/Layouts/Hud.uxml" />
     <ui:Template name="Inspection" src="project://database/Assets/UI/Layouts/Inspection.uxml" />
@@ -9,6 +9,10 @@
     <ui:Template name="Puzzle" src="project://database/Assets/UI/Layouts/Puzzle.uxml" />
     <ui:Template name="Hint" src="project://database/Assets/UI/Layouts/Hint.uxml" />
     <ui:Template name="Accusation" src="project://database/Assets/UI/Layouts/Accusation.uxml" />
+    <ui:Template name="MainMenu" src="project://database/Assets/UI/Layouts/MainMenu.uxml" />
+    <ui:Template name="Pause" src="project://database/Assets/UI/Layouts/Pause.uxml" />
+    <ui:Template name="Settings" src="project://database/Assets/UI/Layouts/Settings.uxml" />
+    <ui:Template name="Confirm" src="project://database/Assets/UI/Layouts/Confirm.uxml" />
     <ui:Template name="Message" src="project://database/Assets/UI/Layouts/Message.uxml" />
     <ui:Template name="Fader" src="project://database/Assets/UI/Layouts/Fader.uxml" />
     <ui:VisualElement name="root" class="layer" picking-mode="Ignore">
@@ -20,7 +24,11 @@
         <ui:Instance template="Dialogue" class="layer" picking-mode="Ignore" />
         <ui:Instance template="EvidencePicker" class="layer" picking-mode="Ignore" />
         <ui:Instance template="Puzzle" class="layer" picking-mode="Ignore" />
+        <ui:Instance template="MainMenu" class="layer" picking-mode="Ignore" />
+        <ui:Instance template="Pause" class="layer" picking-mode="Ignore" />
+        <ui:Instance template="Settings" class="layer" picking-mode="Ignore" />
         <ui:Instance template="Message" class="layer" picking-mode="Ignore" />
+        <ui:Instance template="Confirm" class="layer" picking-mode="Ignore" />
         <ui:Instance template="Fader" class="layer" picking-mode="Ignore" />
     </ui:VisualElement>
 </ui:UXML>

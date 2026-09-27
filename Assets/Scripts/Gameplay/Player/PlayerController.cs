@@ -1,6 +1,7 @@
 using HollowCreek.Core;
 using HollowCreek.Gameplay.Input;
 using HollowCreek.Gameplay.Locations;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace HollowCreek.Gameplay.Player
@@ -12,6 +13,8 @@ namespace HollowCreek.Gameplay.Player
         [Header("Ссылки")]
         [SerializeField, Tooltip("Голова: вращается вверх-вниз, к ней прикреплена камера")]
         Transform head;
+        [SerializeField, Tooltip("Камера от первого лица — для настройки поля зрения")]
+        CinemachineCamera firstPersonCamera;
 
         [Header("Движение")]
         [SerializeField] float walkSpeed = 3.0f;
@@ -40,6 +43,29 @@ namespace HollowCreek.Gameplay.Player
 
         /// <summary>Игрок сделал шаг (для звука шагов).</summary>
         public event System.Action Stepped;
+
+        /// <summary>Градусов поворота на пиксель движения мыши (настройка игрока).</summary>
+        public float MouseSensitivity
+        {
+            get => mouseSensitivity;
+            set => mouseSensitivity = Mathf.Clamp(value, 0.02f, 0.5f);
+        }
+
+        /// <summary>Инвертировать вертикальный обзор.</summary>
+        public bool InvertY { get; set; }
+
+        /// <summary>Поле зрения камеры от первого лица (градусы по вертикали).</summary>
+        public float FieldOfView
+        {
+            get => firstPersonCamera != null ? firstPersonCamera.Lens.FieldOfView : 0f;
+            set
+            {
+                if (firstPersonCamera == null) return;
+                var lens = firstPersonCamera.Lens;
+                lens.FieldOfView = Mathf.Clamp(value, 50f, 90f);
+                firstPersonCamera.Lens = lens;
+            }
+        }
 
         /// <summary>Точка глаз игрока — на неё смотрят собеседники.</summary>
         public Vector3 EyePosition => head.position;
@@ -120,7 +146,7 @@ namespace HollowCreek.Gameplay.Player
                 : look * mouseSensitivity;
 
             transform.Rotate(0f, degrees.x, 0f);
-            pitch = Mathf.Clamp(pitch - degrees.y, minPitch, maxPitch);
+            pitch = Mathf.Clamp(pitch + (InvertY ? degrees.y : -degrees.y), minPitch, maxPitch);
             head.localRotation = Quaternion.Euler(pitch, 0f, 0f);
         }
 

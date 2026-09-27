@@ -630,3 +630,114 @@
     -unity-text-align: middle-left;
     white-space: normal;
 }
+
+/* ---------- Главное меню ---------- */
+
+.main-menu {
+    background-color: rgba(4, 7, 9, 0.45);
+    justify-content: center;
+    padding-left: 9%;
+}
+
+.main-menu__column {
+    width: 460px;
+}
+
+.main-menu__title {
+    -unity-font-definition: var(--font-title);
+    font-size: 76px;
+    color: var(--color-amber);
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9);
+}
+
+.main-menu__subtitle {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 36px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.menu-buttons {
+    margin-top: 12px;
+}
+
+.menu-button {
+    margin-bottom: 10px;
+    -unity-text-align: middle-left;
+    padding-left: 26px;
+}
+
+.menu-button:focus {
+    border-color: var(--color-amber);
+}
+
+/* ---------- Пауза, настройки, подтверждение ---------- */
+
+.pause__panel {
+    width: 440px;
+}
+
+.settings__panel {
+    width: 60%;
+    max-width: 860px;
+    max-height: 86%;
+}
+
+.settings__body {
+    flex-shrink: 1;
+    margin-top: 8px;
+}
+
+.setting {
+    margin: 6px 0;
+    min-height: 34px;
+}
+
+.setting > .unity-base-field__label {
+    min-width: 280px;
+    font-size: 19px;
+    color: var(--color-cream);
+}
+
+.setting .unity-base-slider__dragger {
+    background-color: var(--color-amber);
+    border-color: var(--color-amber);
+}
+
+.setting .unity-base-slider__tracker {
+    background-color: var(--color-panel-light);
+    border-color: var(--color-line);
+}
+
+.setting .unity-base-popup-field__input,
+.setting .unity-base-text-field__input,
+.setting .unity-toggle__checkmark {
+    background-color: var(--color-panel-light);
+    border-color: var(--color-line);
+    color: var(--color-cream);
+    font-size: 18px;
+}
+
+.setting .unity-toggle__checkmark {
+    -unity-background-image-tint-color: var(--color-amber);
+}
+
+.setting .unity-base-slider__text-field {
+    width: 64px;
+}
+
+.settings__footer,
+.confirm__footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.settings__footer .button,
+.confirm__footer .button {
+    margin-left: 12px;
+}
+
+.confirm__panel {
+    width: 560px;
+}

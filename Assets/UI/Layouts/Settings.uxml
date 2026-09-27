@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="settings-screen" class="layer dim hidden">
+        <ui:VisualElement class="panel settings__panel">
+            <ui:Label text="@settings.title" class="title" />
+            <ui:ScrollView class="settings__body" horizontal-scroller-visibility="Hidden">
+                <ui:Label text="@settings.section.sound" class="section-header" />
+                <ui:Slider name="set-master" label="@settings.master" low-value="0" high-value="1" class="setting" />
+                <ui:Slider name="set-effects" label="@settings.effects" low-value="0" high-value="1" class="setting" />
+                <ui:Slider name="set-ambience" label="@settings.ambience" low-value="0" high-value="1" class="setting" />
+                <ui:Slider name="set-interface" label="@settings.interface" low-value="0" high-value="1" class="setting" />
+                <ui:Label text="@settings.section.controls" class="section-header" />
+                <ui:Slider name="set-sensitivity" label="@settings.sensitivity" low-value="0.02" high-value="0.3" class="setting" />
+                <ui:Toggle name="set-invert" label="@settings.invert" class="setting" />
+                <ui:Label text="@settings.section.video" class="section-header" />
+                <ui:SliderInt name="set-fov" label="@settings.fov" low-value="50" high-value="90" show-input-field="true" class="setting" />
+                <ui:Toggle name="set-fullscreen" label="@settings.fullscreen" class="setting" />
+                <ui:DropdownField name="set-quality" label="@settings.quality" class="setting" />
+            </ui:ScrollView>
+            <ui:VisualElement class="settings__footer">
+                <ui:Button name="set-reset" text="@settings.reset" class="button" />
+                <ui:Button name="set-close" text="@settings.close" class="button button--primary" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
