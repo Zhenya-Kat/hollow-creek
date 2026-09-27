@@ -40,6 +40,15 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  returnGreeting:
+    m_TableReference:
+      m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+    m_TableEntryReference:
+      m_KeyId: 2003416637441
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   metFact: {fileID: 11400000, guid: 647c68a503741dd4887e5a41415f9abb, type: 2}
   topics:
   - id: alibi

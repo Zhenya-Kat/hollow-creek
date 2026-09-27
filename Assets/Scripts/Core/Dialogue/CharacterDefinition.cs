@@ -18,8 +18,10 @@ namespace HollowCreek.Core.Dialogue
         [SerializeField] LocalizedString displayName;
         [SerializeField, Tooltip("Кто это: «Сестра Элис», «Мэр Холлоу-Крик»…")]
         LocalizedString role;
-        [SerializeField, Tooltip("Что персонаж говорит, когда к нему подходят")]
+        [SerializeField, Tooltip("Что персонаж говорит при первой встрече")]
         LocalizedString greeting;
+        [SerializeField, Tooltip("Что персонаж говорит при следующих разговорах. Пусто — снова приветствие.")]
+        LocalizedString returnGreeting;
         [SerializeField, Tooltip("Факт «игрок говорил с персонажем». Выдаётся при первом разговоре.")]
         FactDefinition metFact;
 
@@ -32,6 +34,8 @@ namespace HollowCreek.Core.Dialogue
         public LocalizedString DisplayName => displayName;
         public LocalizedString Role => role;
         public LocalizedString Greeting => greeting;
+        public LocalizedString ReturnGreeting =>
+            returnGreeting == null || returnGreeting.IsEmpty ? greeting : returnGreeting;
         public FactDefinition MetFact => metFact;
         public IReadOnlyList<DialogueTopic> Topics => topics;
         public IReadOnlyList<EvidenceReaction> Reactions => reactions;

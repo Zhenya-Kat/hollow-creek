@@ -257,3 +257,78 @@
     margin-top: 6px;
     white-space: normal;
 }
+
+.button--primary {
+    border-color: var(--color-amber);
+    color: var(--color-amber);
+    margin-left: 12px;
+}
+
+/* ---------- Разговор ---------- */
+
+.dialogue {
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 28px;
+}
+
+.dialogue__panel {
+    width: 72%;
+    max-width: 1250px;
+    max-height: 62%;
+    padding: 24px 34px;
+}
+
+.dialogue__header {
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.dialogue__name {
+    font-size: 30px;
+    margin-right: 16px;
+}
+
+.dialogue__role {
+    margin-bottom: 5px;
+}
+
+.dialogue__speech-scroll {
+    flex-shrink: 1;
+    max-height: 240px;
+}
+
+.dialogue__speech {
+    font-size: 22px;
+    margin-bottom: 14px;
+}
+
+.dialogue__choices {
+    border-top-width: 1px;
+    border-top-color: var(--color-line);
+    padding-top: 12px;
+}
+
+.dialogue__choice {
+    -unity-text-align: middle-left;
+    -unity-font-definition: var(--font-body);
+    white-space: normal;
+    margin-bottom: 6px;
+    border-left-width: 3px;
+    border-left-color: var(--color-amber);
+}
+
+.dialogue__choice--asked {
+    color: var(--color-muted);
+    border-left-color: var(--color-line);
+}
+
+.dialogue__footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.dialogue__footer .button {
+    margin-left: 12px;
+}

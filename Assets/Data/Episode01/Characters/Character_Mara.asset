@@ -40,6 +40,15 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  returnGreeting:
+    m_TableReference:
+      m_TableCollectionName: GUID:4841907fde87b9c49b2deb249a14e36c
+    m_TableEntryReference:
+      m_KeyId: 2003232088064
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   metFact: {fileID: 11400000, guid: 67e747917602d7c49ba0921bcc584c84, type: 2}
   topics:
   - id: quarrel

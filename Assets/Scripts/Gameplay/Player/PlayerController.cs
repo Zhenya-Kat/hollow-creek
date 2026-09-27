@@ -35,21 +35,55 @@ namespace HollowCreek.Gameplay.Player
         float verticalVelocity;
         float pitch;
 
+        /// <summary>Точка глаз игрока — на неё смотрят собеседники.</summary>
+        public Vector3 EyePosition => head.position;
+
         void Awake()
         {
+            Services.Register(this);
             body = GetComponent<CharacterController>();
             input = Services.Get<GameInput>();
             locations = Services.Get<LocationLoader>();
         }
 
+        void OnDestroy() => Services.Unregister(this);
+
         void OnEnable() => locations.LocationLoaded += OnLocationLoaded;
         void OnDisable() => locations.LocationLoaded -= OnLocationLoaded;
+
+        // Плавный поворот к точке (например, к собеседнику), пока игрок не управляет обзором.
+        float turnFromYaw, turnToYaw, turnFromPitch, turnToPitch, turnTime, turnDuration;
 
         void Update()
         {
             var controllable = input.Mode == InputMode.Gameplay;
-            if (controllable) UpdateLook();
+            if (turnTime < turnDuration) UpdateTurn();
+            else if (controllable) UpdateLook();
             UpdateMovement(controllable);
+        }
+
+        /// <summary>Плавно повернуть голову и тело так, чтобы смотреть на точку.</summary>
+        public void FaceTowards(Vector3 worldPoint, float duration = 0.4f)
+        {
+            var toTarget = worldPoint - head.position;
+            var flat = new Vector3(toTarget.x, 0f, toTarget.z);
+            if (flat.sqrMagnitude < 0.0001f) return;
+
+            turnFromYaw = transform.eulerAngles.y;
+            turnToYaw = turnFromYaw + Mathf.DeltaAngle(turnFromYaw, Quaternion.LookRotation(flat).eulerAngles.y);
+            turnFromPitch = pitch;
+            turnToPitch = Mathf.Clamp(-Mathf.Atan2(toTarget.y, flat.magnitude) * Mathf.Rad2Deg, minPitch, maxPitch);
+            turnTime = 0f;
+            turnDuration = Mathf.Max(0.01f, duration);
+        }
+
+        void UpdateTurn()
+        {
+            turnTime += Time.deltaTime;
+            var t = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(turnTime / turnDuration));
+            transform.rotation = Quaternion.Euler(0f, Mathf.Lerp(turnFromYaw, turnToYaw, t), 0f);
+            pitch = Mathf.Lerp(turnFromPitch, turnToPitch, t);
+            head.localRotation = Quaternion.Euler(pitch, 0f, 0f);
         }
 
         /// <summary>Поворот тела (градусы вокруг вертикали).</summary>
@@ -67,6 +101,7 @@ namespace HollowCreek.Gameplay.Player
             body.enabled = true;
             pitch = Mathf.Clamp(headPitch, minPitch, maxPitch);
             head.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+            turnDuration = 0f;
             horizontalVelocity = Vector3.zero;
             verticalVelocity = 0f;
         }

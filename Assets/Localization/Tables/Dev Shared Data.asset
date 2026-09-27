@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: pencil.text
     m_Metadata:
       m_Items: []
+  - m_Id: 6895514411008
+    m_Key: devbox.prompt
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

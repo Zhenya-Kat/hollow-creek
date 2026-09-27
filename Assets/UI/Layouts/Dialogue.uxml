@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="dialogue" class="layer dialogue hidden" picking-mode="Ignore">
+        <ui:VisualElement class="panel dialogue__panel">
+            <ui:VisualElement class="dialogue__header">
+                <ui:Label name="name" class="title dialogue__name" />
+                <ui:Label name="role" class="subtitle dialogue__role" />
+            </ui:VisualElement>
+            <ui:ScrollView class="dialogue__speech-scroll" horizontal-scroller-visibility="Hidden">
+                <ui:Label name="speech" class="body-text dialogue__speech" />
+            </ui:ScrollView>
+            <ui:VisualElement name="choices" class="dialogue__choices" />
+            <ui:VisualElement class="dialogue__footer">
+                <ui:Button name="present" text="@dialogue.present" class="button" />
+                <ui:Button name="leave" text="@dialogue.leave" class="button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

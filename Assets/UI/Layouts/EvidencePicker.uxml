@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="evidence-picker" class="layer dim hidden">
+        <ui:VisualElement class="panel notebook__panel">
+            <ui:VisualElement class="notebook__header">
+                <ui:Label name="picker-title" class="title" />
+            </ui:VisualElement>
+            <ui:VisualElement class="notebook__columns">
+                <ui:ScrollView name="list" class="notebook__list" horizontal-scroller-visibility="Hidden" />
+                <ui:ScrollView class="notebook__detail" horizontal-scroller-visibility="Hidden">
+                    <ui:Label name="detail-title" class="title" />
+                    <ui:Label name="detail-subtitle" class="subtitle" />
+                    <ui:Label name="detail-body" class="body-text" />
+                </ui:ScrollView>
+            </ui:VisualElement>
+            <ui:VisualElement class="message__footer">
+                <ui:Button name="cancel" text="@evidence.cancel" class="button" />
+                <ui:Button name="confirm" text="@evidence.confirm" class="button button--primary" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

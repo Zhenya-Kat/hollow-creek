@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using HollowCreek.Core;
 using HollowCreek.Core.State;
+using HollowCreek.Gameplay.Dialogue;
 using HollowCreek.Gameplay.Input;
 using HollowCreek.Gameplay.Inspection;
 using HollowCreek.Gameplay.Interaction;
@@ -40,6 +41,9 @@ namespace HollowCreek.UI
             views.Add(new HudView(root.Q("hud"), Services.Get<Interactor>(), modals, input, state));
             views.Add(new InspectionOverlay(root.Q("inspection"), Services.Get<InspectionController>(), input));
             views.Add(new NotebookScreen(root.Q("notebook"), modals, input, state));
+            var picker = new EvidencePickerScreen(root.Q("evidence-picker"), modals, state);
+            views.Add(picker);
+            views.Add(new DialogueScreen(root.Q("dialogue"), modals, Services.Get<DialogueService>(), picker));
             messages = new MessageScreen(root.Q("message"), modals);
             views.Add(messages);
             Services.Register<IMessagePresenter>(messages);

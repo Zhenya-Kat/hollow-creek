@@ -99,6 +99,26 @@ MonoBehaviour:
     m_Key: key.MMB
     m_Metadata:
       m_Items: []
+  - m_Id: 6895984173056
+    m_Key: dialogue.present
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6896072253440
+    m_Key: dialogue.leave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6896072253441
+    m_Key: evidence.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6896072253442
+    m_Key: evidence.confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6896072253443
+    m_Key: evidence.cancel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
