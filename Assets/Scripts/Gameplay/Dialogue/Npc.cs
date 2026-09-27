@@ -16,6 +16,10 @@ namespace HollowCreek.Gameplay.Dialogue
         bool turnToSpeaker = true;
         [SerializeField, Tooltip("Скорость поворота (градусы в секунду)")]
         float turnSpeed = 240f;
+        [SerializeField, Tooltip("Аниматор модели. Необязательно: без него персонаж просто стоит.")]
+        Animator animator;
+
+        static readonly int TalkTrigger = Animator.StringToHash("Talk");
 
         float restYaw;
         float targetYaw;
@@ -45,5 +49,12 @@ namespace HollowCreek.Gameplay.Dialogue
         }
 
         public void ReturnToRest() => targetYaw = restYaw;
+
+        /// <summary>Начался разговор: повернуться к собеседнику и сделать жест.</summary>
+        public void BeginConversation(Vector3 speakerPosition)
+        {
+            FaceTowards(speakerPosition);
+            if (animator != null) animator.SetTrigger(TalkTrigger);
+        }
     }
 }

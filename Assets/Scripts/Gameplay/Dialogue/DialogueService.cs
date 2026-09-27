@@ -53,7 +53,7 @@ namespace HollowCreek.Gameplay.Dialogue
             {
                 // Смотрим чуть ниже лица: так голова собеседника оказывается над панелью разговора.
                 player.FaceTowards(npc.LookPoint + Vector3.down * FramingDrop);
-                npc.FaceTowards(player.EyePosition);
+                npc.BeginConversation(player.EyePosition);
             }
 
             Started?.Invoke(Current);
