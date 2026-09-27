@@ -72,6 +72,12 @@ namespace HollowCreek.Tests
                 Require(problems, objective.Text, $"цель {objective.Id}");
                 if (objective.Hints.Count != 3) problems.Add($"цель {objective.Id}: подсказок {objective.Hints.Count}, нужно 3");
             }
+            foreach (var puzzle in episode.Puzzles)
+            {
+                if (puzzle == null) { problems.Add("пустой элемент в списке головоломок"); continue; }
+                Require(problems, puzzle.Title, $"{puzzle.name}: название");
+                if (puzzle.SolvedFact == null) problems.Add($"{puzzle.name}: нет факта решения");
+            }
             foreach (var fact in episode.Facts.OfType<ClueDefinition>())
             {
                 Require(problems, fact.Title, $"{fact.name}: название");
@@ -113,6 +119,7 @@ namespace HollowCreek.Tests
         {
             yield return episode;
             foreach (var character in episode.Characters) yield return character;
+            foreach (var puzzle in episode.Puzzles) yield return puzzle;
             if (episode.Objectives) yield return episode.Objectives;
             if (episode.Rules) yield return episode.Rules;
             if (episode.Case) yield return episode.Case;

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using HollowCreek.Core.Data;
 using HollowCreek.Core.Dialogue;
 using HollowCreek.Core.Facts;
+using HollowCreek.Core.Puzzles;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -23,6 +24,8 @@ namespace HollowCreek.Core.Story
         [SerializeField, Tooltip("Все факты эпизода: улики, предметы, отметки прогресса")]
         List<FactDefinition> facts = new();
         [SerializeField] List<CharacterDefinition> characters = new();
+        [SerializeField, Tooltip("Головоломки эпизода (для проверки данных и обзора)")]
+        List<PuzzleDefinition> puzzles = new();
         [SerializeField] ObjectiveSet objectives;
         [SerializeField] StoryRuleSet rules;
         [SerializeField] CaseDefinition caseDefinition;
@@ -32,6 +35,7 @@ namespace HollowCreek.Core.Story
         public LocationDefinition StartLocation => startLocation;
         public IReadOnlyList<FactDefinition> Facts => facts;
         public IReadOnlyList<CharacterDefinition> Characters => characters;
+        public IReadOnlyList<PuzzleDefinition> Puzzles => puzzles;
         public ObjectiveSet Objectives => objectives;
         public StoryRuleSet Rules => rules;
         public CaseDefinition Case => caseDefinition;

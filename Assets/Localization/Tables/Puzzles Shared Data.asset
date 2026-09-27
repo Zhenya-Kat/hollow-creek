@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Puzzles Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Puzzles
+  m_TableCollectionNameGuidString: ab33ca744da442949bcffbcf7a40ab65
+  m_Entries:
+  - m_Id: 443539456
+    m_Key: safe.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 514842624
+    m_Key: safe.instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 514842625
+    m_Key: safe.solved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 514842626
+    m_Key: safe.revisit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 829415424
+    m_Key: box.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 829415425
+    m_Key: box.instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 829415426
+    m_Key: box.locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 829415427
+    m_Key: box.solved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 829415428
+    m_Key: box.revisit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 837804032
+    m_Key: box.card.school
+    m_Metadata:
+      m_Items: []
+  - m_Id: 837804033
+    m_Key: box.card.bridge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 837804034
+    m_Key: box.card.cemetery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 837804035
+    m_Key: box.card.house
+    m_Metadata:
+      m_Items: []
+  - m_Id: 841998336
+    m_Key: box.wrong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013964800
+    m_Key: diary.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013964801
+    m_Key: diary.instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013964802
+    m_Key: diary.locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013964803
+    m_Key: diary.solved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013964804
+    m_Key: diary.revisit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013964805
+    m_Key: diary.line1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013964806
+    m_Key: diary.line2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1013964807
+    m_Key: diary.line3
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 547263845907824990
+  references:
+    version: 2
+    RefIds:
+    - rid: 547263845907824990
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1790524536333

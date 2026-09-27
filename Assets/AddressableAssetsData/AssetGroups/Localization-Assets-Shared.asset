@@ -40,6 +40,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab33ca744da442949bcffbcf7a40ab65
+    m_Address: Assets/Localization/Tables/Puzzles Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cabdac003c1bab94ca82cf3024a41c60
     m_Address: Assets/Localization/Tables/Clues Shared Data.asset
     m_ReadOnly: 1

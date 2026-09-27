@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623e3ca1a02d2814f86640193a0412b1, type: 3}
+  m_Name: Puzzle_PhotoBox
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Puzzles.SequencePuzzle
+  title:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 829415424
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  instructions:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 829415425
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  requires:
+    rid: 547263845907824993
+  lockedMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 829415426
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  solvedFact: {fileID: 11400000, guid: 55029ac35814e774ea601842ba0da07b, type: 2}
+  onSolved:
+  - rid: 547263845907824994
+  solvedMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 829415427
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  revisitMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 829415428
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cards:
+  - image: {fileID: 7818586908277287455, guid: 36071569ae6b83c4d84621996c5f5659, type: 3}
+    caption:
+      m_TableReference:
+        m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+      m_TableEntryReference:
+        m_KeyId: 837804032
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - image: {fileID: -3584298334381262696, guid: 36a52aefc46391d479ec02a0754e96c9, type: 3}
+    caption:
+      m_TableReference:
+        m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+      m_TableEntryReference:
+        m_KeyId: 837804033
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - image: {fileID: -7048981808139874457, guid: 0c28db147427b6447be9b22c95db1cfb, type: 3}
+    caption:
+      m_TableReference:
+        m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+      m_TableEntryReference:
+        m_KeyId: 837804034
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - image: {fileID: 2345658748259684271, guid: d86e54fef415aba45b0c8e613a6d4b68, type: 3}
+    caption:
+      m_TableReference:
+        m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+      m_TableEntryReference:
+        m_KeyId: 837804035
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  startOrder: 01000000030000000000000002000000i
+  wrongOrderMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 841998336
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 547263845907824993
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: c197d81e3a937b04e95078e3ec88d9e8, type: 2}
+    - rid: 547263845907824994
+      type: {class: GrantFactAction, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 7a92ca34a44cb9640b1f9cec2a8dd205, type: 2}

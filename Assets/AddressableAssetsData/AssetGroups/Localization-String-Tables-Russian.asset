@@ -29,6 +29,13 @@ MonoBehaviour:
     - Locale-ru
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ea17fc8e02ca3943bbd47e665f332d1
+    m_Address: Puzzles_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df2c506e17dd93343900593bca0d074f
     m_Address: Dialogue_ru
     m_ReadOnly: 1

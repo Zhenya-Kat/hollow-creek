@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bfe419f8b11d6c438020d032b509989, type: 3}
+  m_Name: Puzzle_Safe
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Puzzles.CodeLockPuzzle
+  title:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 443539456
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  instructions:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 514842624
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  requires:
+    rid: -2
+  lockedMessage:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  solvedFact: {fileID: 11400000, guid: 86aafae45b608a94baa03ad99b089f58, type: 2}
+  onSolved:
+  - rid: 547263845907824991
+  - rid: 547263845907824992
+  solvedMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 514842625
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  revisitMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 514842626
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  code: 1031
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 547263845907824991
+      type: {class: GrantFactAction, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 33db6fd284289ce4e843506e5d8f4668, type: 2}
+    - rid: 547263845907824992
+      type: {class: GrantFactAction, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: c197d81e3a937b04e95078e3ec88d9e8, type: 2}

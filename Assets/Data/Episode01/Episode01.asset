@@ -65,6 +65,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c63525429f610ec42a685d359647240d, type: 2}
   - {fileID: 11400000, guid: 82490bfbc4e085e49ad7720e6a347f20, type: 2}
   - {fileID: 11400000, guid: 3f225bebff1e87f46bb4f096450d2188, type: 2}
+  puzzles:
+  - {fileID: 11400000, guid: da3b5bfea45edeb42ad2c86e88b3890b, type: 2}
+  - {fileID: 11400000, guid: acd041b21a96f054d91080e8e520bfab, type: 2}
+  - {fileID: 11400000, guid: 1f659aa796729e840b1145d8fcbb318b, type: 2}
   objectives: {fileID: 11400000, guid: 8a373769ea6d3244db2ee4b4f1a2a1e8, type: 2}
   rules: {fileID: 11400000, guid: 4a42f78c69ac8d8448bc95fd02f0c954, type: 2}
   caseDefinition: {fileID: 11400000, guid: 32cd647173deb8242ae6f0933b19244b, type: 2}

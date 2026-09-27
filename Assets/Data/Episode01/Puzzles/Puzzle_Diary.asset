@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8735b0fe2af15854b998d9855f2a1701, type: 3}
+  m_Name: Puzzle_Diary
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Puzzles.RubbingPuzzle
+  title:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 1013964800
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  instructions:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 1013964801
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  requires:
+    rid: 547263845907824995
+  lockedMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 1013964802
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  solvedFact: {fileID: 11400000, guid: d50623c8e4b1bb34caecb746cd91e9b7, type: 2}
+  onSolved: []
+  solvedMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 1013964803
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  revisitMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 1013964804
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  lines:
+  - m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 1013964805
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 1013964806
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:ab33ca744da442949bcffbcf7a40ab65
+    m_TableEntryReference:
+      m_KeyId: 1013964807
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  segmentsPerLine: 16
+  requiredCoverage: 0.85
+  references:
+    version: 2
+    RefIds:
+    - rid: 547263845907824995
+      type: {class: HasFact, ns: HollowCreek.Core.Logic, asm: HollowCreek.Core}
+      data:
+        fact: {fileID: 11400000, guid: 7c553a0e2752b214b99097427c3731db, type: 2}

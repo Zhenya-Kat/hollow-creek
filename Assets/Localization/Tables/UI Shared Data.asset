@@ -119,6 +119,46 @@ MonoBehaviour:
     m_Key: evidence.cancel
     m_Metadata:
       m_Items: []
+  - m_Id: 11366885744640
+    m_Key: puzzle.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366957047808
+    m_Key: codelock.erase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366957047809
+    m_Key: codelock.open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366957047810
+    m_Key: codelock.prompt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366957047811
+    m_Key: codelock.wrong
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366957047812
+    m_Key: codelock.right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366957047813
+    m_Key: sequence.check
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366957047814
+    m_Key: sequence.hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366957047815
+    m_Key: rubbing.hint.km
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11366978019328
+    m_Key: rubbing.hint.gamepad
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

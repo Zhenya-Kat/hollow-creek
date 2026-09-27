@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 219853197}
   - component: {fileID: 219853196}
   - component: {fileID: 219853199}
+  - component: {fileID: 219853200}
   m_Layer: 0
   m_Name: '[Game]'
   m_TagString: Untagged
@@ -387,6 +388,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f39404f81275a4cae96a42a8b62193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Dialogue.DialogueService
+  FramingDrop: 0.35
+--- !u!114 &219853200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219853192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a896658b31127874b80972c0be5d8138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Puzzles.PuzzleService
 --- !u!1 &275290156
 GameObject:
   m_ObjectHideFlags: 0

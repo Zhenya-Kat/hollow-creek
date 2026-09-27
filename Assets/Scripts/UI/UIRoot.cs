@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using HollowCreek.Core;
+using HollowCreek.Core.Puzzles;
 using HollowCreek.Core.State;
 using HollowCreek.Gameplay.Dialogue;
+using HollowCreek.Gameplay.Puzzles;
+using HollowCreek.UI.Puzzles;
 using HollowCreek.Gameplay.Input;
 using HollowCreek.Gameplay.Inspection;
 using HollowCreek.Gameplay.Interaction;
@@ -44,6 +47,13 @@ namespace HollowCreek.UI
             var picker = new EvidencePickerScreen(root.Q("evidence-picker"), modals, state);
             views.Add(picker);
             views.Add(new DialogueScreen(root.Q("dialogue"), modals, Services.Get<DialogueService>(), picker));
+            views.Add(new PuzzleScreen(root.Q("puzzle"), modals, Services.Get<PuzzleService>(),
+                new Dictionary<Type, Func<IPuzzleView>>
+                {
+                    [typeof(CodeLockPuzzle)] = () => new CodeLockView(),
+                    [typeof(SequencePuzzle)] = () => new SequenceView(),
+                    [typeof(RubbingPuzzle)] = () => new RubbingView(input),
+                }));
             messages = new MessageScreen(root.Q("message"), modals);
             views.Add(messages);
             Services.Register<IMessagePresenter>(messages);

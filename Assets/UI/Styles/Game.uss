@@ -332,3 +332,174 @@
 .dialogue__footer .button {
     margin-left: 12px;
 }
+
+/* ---------- Головоломки ---------- */
+
+.puzzle__panel {
+    width: 70%;
+    max-width: 1150px;
+    align-items: stretch;
+}
+
+.puzzle__instructions {
+    margin-top: 10px;
+    color: var(--color-muted);
+}
+
+.puzzle__body {
+    margin-top: 22px;
+    align-items: center;
+}
+
+.puzzle__status {
+    margin-top: 18px;
+    min-height: 26px;
+    -unity-text-align: middle-center;
+    color: var(--color-amber);
+    font-size: 19px;
+    white-space: normal;
+}
+
+/* Кодовый замок */
+
+.codelock {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.codelock__face {
+    width: 300px;
+    height: 330px;
+    margin-right: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(38, 50, 52);
+    border-width: 6px;
+    border-color: rgb(120, 126, 108);
+    border-radius: 10px;
+}
+
+.codelock__lamp {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    margin-bottom: 30px;
+    background-color: rgb(110, 36, 22);
+    transition-property: background-color;
+    transition-duration: 0.25s;
+}
+
+.codelock__lamp--wrong {
+    background-color: rgb(235, 52, 34);
+}
+
+.codelock__lamp--right {
+    background-color: rgb(60, 230, 110);
+}
+
+.codelock__display {
+    -unity-font-definition: var(--font-bold);
+    font-size: 44px;
+    letter-spacing: 6px;
+    color: rgb(205, 230, 190);
+    background-color: rgb(14, 20, 18);
+    padding: 10px 22px;
+    border-radius: 4px;
+}
+
+.codelock__pad {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 330px;
+}
+
+.codelock__key {
+    width: 98px;
+    height: 72px;
+    margin: 0 10px 10px 0;
+    font-size: 26px;
+    padding: 0;
+}
+
+.codelock__key--word {
+    font-size: 17px;
+}
+
+.codelock__key.button--primary {
+    margin-left: 0;
+}
+
+/* Раскладка снимков */
+
+.sequence {
+    align-items: center;
+}
+
+.sequence__row {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.photo {
+    width: 200px;
+    height: 238px;
+    margin: 0 10px;
+    padding: 12px 12px 42px 12px;
+    background-color: rgb(238, 230, 210);
+    border-width: 3px;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    rotate: -1deg;
+    transition-property: translate, border-color;
+    transition-duration: 0.15s;
+}
+
+.photo:hover,
+.photo:focus {
+    border-color: rgba(235, 166, 82, 0.5);
+}
+
+.photo--selected {
+    translate: 0 -18px;
+    border-color: var(--color-amber);
+}
+
+.photo__image {
+    flex-grow: 1;
+    background-color: rgb(60, 66, 70);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.sequence__check {
+    margin-top: 30px;
+}
+
+/* Штриховка */
+
+.rubbing__paper {
+    background-color: rgb(222, 208, 176);
+    border-width: 1px;
+    border-color: rgb(120, 98, 70);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.rubbing__line {
+    position: absolute;
+    height: 36px;
+    -unity-text-align: middle-left;
+    -unity-font-definition: var(--font-body);
+    font-size: 25px;
+    color: rgb(62, 55, 50);
+    white-space: nowrap;
+}
+
+.rubbing__cursor {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border-width: 2px;
+    border-color: rgb(60, 50, 40);
+}
