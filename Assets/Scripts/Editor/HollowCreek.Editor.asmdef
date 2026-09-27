@@ -1,0 +1,22 @@
+{
+    "name": "HollowCreek.Editor",
+    "rootNamespace": "HollowCreek.Editor",
+    "references": [
+        "HollowCreek.Core",
+        "HollowCreek.Gameplay",
+        "HollowCreek.UI",
+        "Unity.Localization",
+        "Unity.Localization.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

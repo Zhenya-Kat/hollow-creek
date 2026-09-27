@@ -1,0 +1,19 @@
+{
+    "name": "HollowCreek.UI",
+    "rootNamespace": "HollowCreek.UI",
+    "references": [
+        "HollowCreek.Core",
+        "HollowCreek.Gameplay",
+        "Unity.InputSystem",
+        "Unity.Localization"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

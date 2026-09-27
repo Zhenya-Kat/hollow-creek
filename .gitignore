@@ -57,3 +57,6 @@ crashlytics-build.properties
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Результаты сборки Addressables
+/[Ss]erver[Dd]ata/

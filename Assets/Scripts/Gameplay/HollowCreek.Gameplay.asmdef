@@ -1,0 +1,19 @@
+{
+    "name": "HollowCreek.Gameplay",
+    "rootNamespace": "HollowCreek.Gameplay",
+    "references": [
+        "HollowCreek.Core",
+        "Unity.InputSystem",
+        "Unity.Cinemachine",
+        "Unity.Localization"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
