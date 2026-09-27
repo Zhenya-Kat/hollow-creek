@@ -1,0 +1,13 @@
+# Нормализация переносов строк для текстовых файлов
+* text=auto
+
+# Unity-файлы в YAML: git не должен пытаться склеивать их построчно при конфликтах
+*.unity    text merge=unityyamlmerge eol=lf
+*.prefab   text merge=unityyamlmerge eol=lf
+*.asset    text merge=unityyamlmerge eol=lf
+*.meta     text merge=unityyamlmerge eol=lf
+*.mat      text merge=unityyamlmerge eol=lf
+*.anim     text merge=unityyamlmerge eol=lf
+*.controller text merge=unityyamlmerge eol=lf
+
+*.cs       text diff=csharp
