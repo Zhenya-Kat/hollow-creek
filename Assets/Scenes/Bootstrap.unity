@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 219853196}
   - component: {fileID: 219853199}
   - component: {fileID: 219853200}
+  - component: {fileID: 219853201}
   m_Layer: 0
   m_Name: '[Game]'
   m_TagString: Untagged
@@ -304,9 +305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0443c2559b9d93b43a67a69b6ca5cec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Bootstrap.GameBootstrapper
+  episode: {fileID: 11400000, guid: ce5e2f73feb571442ada54e59221f62b, type: 2}
   locationLoader: {fileID: 219853194}
   locationCatalog: {fileID: 11400000, guid: b0e0f75869e9e6e4aa111156bcdb281c, type: 2}
-  startLocation: {fileID: 11400000, guid: b86a74c059f2e644ea8d49eaedc9784a, type: 2}
 --- !u!114 &219853194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae2815232b0934448c5a141d84510f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Locations.LocationLoader
+  fadeOutTime: 0.3
 --- !u!4 &219853195
 Transform:
   m_ObjectHideFlags: 0
@@ -401,6 +403,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a896658b31127874b80972c0be5d8138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Puzzles.PuzzleService
+--- !u!114 &219853201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219853192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76f5444d6bd3c743944b96a6afe9721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: HollowCreek.Gameplay::HollowCreek.Gameplay.Save.SaveService
+  autosaveDelay: 0.5
 --- !u!1 &275290156
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,8 +484,8 @@ Camera:
   m_GameObject: {fileID: 275290156}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.02, g: 0.03, b: 0.05, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

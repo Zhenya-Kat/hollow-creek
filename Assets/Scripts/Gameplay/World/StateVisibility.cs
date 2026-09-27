@@ -25,12 +25,15 @@ namespace HollowCreek.Gameplay.World
         {
             state = Services.Get<GameState>();
             state.FactGranted += OnFactGranted;
+            state.Restored += Refresh;
             Refresh();
         }
 
         void OnDestroy()
         {
-            if (state != null) state.FactGranted -= OnFactGranted;
+            if (state == null) return;
+            state.FactGranted -= OnFactGranted;
+            state.Restored -= Refresh;
         }
 
         void OnFactGranted(FactDefinition _) => Refresh();

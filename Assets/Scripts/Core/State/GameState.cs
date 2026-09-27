@@ -11,6 +11,7 @@ namespace HollowCreek.Core.State
         /// <summary>Полученные факты в порядке получения.</summary>
         IReadOnlyList<FactDefinition> Facts { get; }
         event Action<FactDefinition> FactGranted;
+        event Action Restored;
     }
 
     /// <summary>Состояние прохождения: набор полученных фактов.</summary>
@@ -42,6 +43,22 @@ namespace HollowCreek.Core.State
         {
             facts.Clear();
             ids.Clear();
+        }
+
+        /// <summary>
+        /// Состояние целиком заменено (загрузка сохранения). В отличие от <see cref="FactGranted"/>,
+        /// уведомления о новых уликах при этом не нужны — только обновить отображение.
+        /// </summary>
+        public event Action Restored;
+
+        /// <summary>Заменить набор фактов (загрузка сохранения). Порядок сохраняется.</summary>
+        public void Restore(IEnumerable<FactDefinition> restored)
+        {
+            Clear();
+            foreach (var fact in restored)
+                if (fact != null && !string.IsNullOrEmpty(fact.Id) && ids.Add(fact.Id))
+                    facts.Add(fact);
+            Restored?.Invoke();
         }
     }
 }

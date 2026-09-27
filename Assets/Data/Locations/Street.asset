@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8ef57c65daffc46b18ee8852a198e3, type: 3}
+  m_Name: Street
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Data.LocationDefinition
+  id: e31c1d0369e3b0c4bbbfc25e19623af5
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:11af9cd5ae6844e44be0751d39134629
+    m_TableEntryReference:
+      m_KeyId: 477093888
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  sceneName: Street
+  scene: {fileID: 102900000, guid: 70ee5eac938f1c044bf0f9e7ffa04c63, type: 3}
+  references:
+    version: 2
+    RefIds: []

@@ -115,6 +115,27 @@ namespace HollowCreek.Tests
             CollectionAssert.IsEmpty(problems);
         }
 
+        [Test]
+        public void LocationCatalogIsComplete()
+        {
+            var catalogs = AssetDatabase.FindAssets("t:LocationCatalog")
+                .Select(AssetDatabase.GUIDToAssetPath)
+                .Select(AssetDatabase.LoadAssetAtPath<HollowCreek.Core.Data.LocationCatalog>)
+                .ToList();
+            Assert.IsNotEmpty(catalogs);
+            foreach (var catalog in catalogs)
+            {
+                Assert.IsFalse(catalog.Locations.Any(l => l == null), "пустая запись в каталоге локаций");
+                foreach (var location in catalog.Locations)
+                    Assert.IsNotEmpty(location.SceneName, $"у локации {location.name} не указана сцена");
+            }
+            foreach (var episode in Episodes())
+            {
+                Assert.IsNotNull(episode.StartLocation, "не указана стартовая локация");
+                Assert.IsTrue(catalogs.Any(c => c.Locations.Contains(episode.StartLocation)), "стартовой локации нет в каталоге");
+            }
+        }
+
         static IEnumerable<Object> ContentAssets(EpisodeDefinition episode)
         {
             yield return episode;

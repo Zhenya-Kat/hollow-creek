@@ -159,6 +159,26 @@ MonoBehaviour:
     m_Key: rubbing.hint.gamepad
     m_Metadata:
       m_Items: []
+  - m_Id: 14988436561920
+    m_Key: prompt.enter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14988528836608
+    m_Key: prompt.exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14988528836609
+    m_Key: prompt.examine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14988528836610
+    m_Key: prompt.pull
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14988528836611
+    m_Key: prompt.shine
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

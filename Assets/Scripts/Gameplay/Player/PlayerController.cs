@@ -56,7 +56,7 @@ namespace HollowCreek.Gameplay.Player
 
         void Update()
         {
-            var controllable = input.Mode == InputMode.Gameplay;
+            var controllable = input.Mode == InputMode.Gameplay && !locations.IsLoading;
             if (turnTime < turnDuration) UpdateTurn();
             else if (controllable) UpdateLook();
             UpdateMovement(controllable);

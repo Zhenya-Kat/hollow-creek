@@ -8,11 +8,17 @@ namespace HollowCreek.Gameplay.Locations
 {
     /// <summary>
     /// Загружает и выгружает сцены-локации поверх постоянной сцены Bootstrap.
-    /// Одновременно загружена только одна локация.
+    /// Одновременно загружена только одна локация. Перед сменой локации экран успевает затемниться.
     /// </summary>
     [DefaultExecutionOrder(-900)]
     public sealed class LocationLoader : MonoBehaviour
     {
+        [SerializeField, Tooltip("Сколько секунд ждать затемнения экрана перед сменой локации")]
+        float fadeOutTime = 0.3f;
+
+        /// <summary>Начинается смена локации (интерфейс затемняет экран).</summary>
+        public event Action<LocationDefinition> LoadingStarted;
+
         /// <summary>Локация загружена; передаётся точка, в которой должен появиться игрок (может быть null).</summary>
         public event Action<LocationRoot, SpawnPoint> LocationLoaded;
 
@@ -34,8 +40,10 @@ namespace HollowCreek.Gameplay.Locations
             IsLoading = true;
             try
             {
+                LoadingStarted?.Invoke(location);
                 if (Current != null)
                 {
+                    await Awaitable.WaitForSecondsAsync(fadeOutTime);
                     var previous = Current.gameObject.scene;
                     Current = null;
                     await SceneManager.UnloadSceneAsync(previous);
@@ -54,10 +62,24 @@ namespace HollowCreek.Gameplay.Locations
             }
         }
 
+        /// <summary>Перейти в локацию «выстрелил и забыл» (для дверей). Ошибки попадают в консоль.</summary>
+        public async void Go(LocationDefinition location, string spawnId = null)
+        {
+            try
+            {
+                await LoadAsync(location, spawnId);
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e, this);
+            }
+        }
+
         /// <summary>Принять уже загруженную сцену как текущую локацию (запуск игры из сцены локации в редакторе).</summary>
         public void Adopt(LocationRoot root, string spawnId = null)
         {
             if (root == null) throw new ArgumentNullException(nameof(root));
+            LoadingStarted?.Invoke(root.Location);
             Enter(root, spawnId);
         }
 

@@ -2,6 +2,7 @@ using System;
 using HollowCreek.Core;
 using HollowCreek.Core.State;
 using HollowCreek.Gameplay.Input;
+using HollowCreek.Gameplay.Locations;
 using UnityEngine;
 
 namespace HollowCreek.Gameplay.Interaction
@@ -19,6 +20,7 @@ namespace HollowCreek.Gameplay.Interaction
 
         GameInput input;
         GameState state;
+        LocationLoader locations;
 
         /// <summary>Объект под прицелом (null — ничего).</summary>
         public Interactable Current { get; private set; }
@@ -29,6 +31,7 @@ namespace HollowCreek.Gameplay.Interaction
         {
             input = Services.Get<GameInput>();
             state = Services.Get<GameState>();
+            locations = Services.Get<LocationLoader>();
             Services.Register(this);
         }
 
@@ -36,7 +39,7 @@ namespace HollowCreek.Gameplay.Interaction
 
         void Update()
         {
-            if (input.Mode != InputMode.Gameplay)
+            if (input.Mode != InputMode.Gameplay || locations.IsLoading)
             {
                 SetCurrent(null);
                 return;

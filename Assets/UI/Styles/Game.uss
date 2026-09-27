@@ -503,3 +503,35 @@
     border-width: 2px;
     border-color: rgb(60, 50, 40);
 }
+
+/* ---------- Смена локации ---------- */
+
+.fader {
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.fader--clear {
+    opacity: 0;
+}
+
+.location-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 16%;
+    -unity-text-align: middle-center;
+    -unity-font-definition: var(--font-title);
+    font-size: 46px;
+    color: var(--color-cream);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.8s;
+}
+
+.location-title--visible {
+    opacity: 1;
+}

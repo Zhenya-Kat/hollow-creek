@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: LocationCatalog
   m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Data.LocationCatalog
   locations:
+  - {fileID: 11400000, guid: e31c1d0369e3b0c4bbbfc25e19623af5, type: 2}
+  - {fileID: 11400000, guid: d859c900ee8f1b346a74a5bf5619c4c9, type: 2}
+  - {fileID: 11400000, guid: 0bb6164bce730a24c961808851a20580, type: 2}
   - {fileID: 11400000, guid: b86a74c059f2e644ea8d49eaedc9784a, type: 2}

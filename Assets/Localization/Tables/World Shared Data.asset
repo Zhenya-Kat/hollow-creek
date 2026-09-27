@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: World Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: World
+  m_TableCollectionNameGuidString: 11af9cd5ae6844e44be0751d39134629
+  m_Entries:
+  - m_Id: 477093888
+    m_Key: location.street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174272
+    m_Key: location.house
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174273
+    m_Key: location.diner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174274
+    m_Key: monument.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174275
+    m_Key: monument.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174276
+    m_Key: shops.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174277
+    m_Key: shops.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174278
+    m_Key: portrait.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174279
+    m_Key: portrait.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174280
+    m_Key: papers.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174281
+    m_Key: papers.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174282
+    m_Key: mirror.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174283
+    m_Key: mirror.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174284
+    m_Key: mirror.writing.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174285
+    m_Key: mirror.writing.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174286
+    m_Key: coffee.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174287
+    m_Key: coffee.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174288
+    m_Key: window.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174289
+    m_Key: window.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174290
+    m_Key: pastries.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174291
+    m_Key: pastries.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174292
+    m_Key: drawer.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174293
+    m_Key: drawer.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174294
+    m_Key: recorder.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565174295
+    m_Key: recorder.text
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 547263845907825030
+  references:
+    version: 2
+    RefIds:
+    - rid: 547263845907825030
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1790525399141

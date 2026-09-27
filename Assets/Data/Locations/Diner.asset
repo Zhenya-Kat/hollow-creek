@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8ef57c65daffc46b18ee8852a198e3, type: 3}
+  m_Name: Diner
+  m_EditorClassIdentifier: HollowCreek.Core::HollowCreek.Core.Data.LocationDefinition
+  id: 0bb6164bce730a24c961808851a20580
+  displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:11af9cd5ae6844e44be0751d39134629
+    m_TableEntryReference:
+      m_KeyId: 565174273
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  sceneName: Diner
+  scene: {fileID: 102900000, guid: 45806c8b67a47f64796c8073f0db897a, type: 3}
+  references:
+    version: 2
+    RefIds: []

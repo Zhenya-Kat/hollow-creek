@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Bootstrap.unity
     guid: 560203a87d5ae974b92a0957fcd0d6c4
   - enabled: 1
+    path: Assets/Scenes/Locations/Street.unity
+    guid: 70ee5eac938f1c044bf0f9e7ffa04c63
+  - enabled: 1
+    path: Assets/Scenes/Locations/House.unity
+    guid: 8401204bb1545b941a27fddba1bdb05b
+  - enabled: 1
+    path: Assets/Scenes/Locations/Diner.unity
+    guid: 45806c8b67a47f64796c8073f0db897a
+  - enabled: 1
     path: Assets/Scenes/Locations/Sandbox.unity
     guid: 74ff80dcc941cf64fadc0ae4d534ff0e
   m_configObjects:

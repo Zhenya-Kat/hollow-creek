@@ -9,6 +9,7 @@ using HollowCreek.UI.Puzzles;
 using HollowCreek.Gameplay.Input;
 using HollowCreek.Gameplay.Inspection;
 using HollowCreek.Gameplay.Interaction;
+using HollowCreek.Gameplay.Locations;
 using HollowCreek.Gameplay.Messages;
 using HollowCreek.Gameplay.Modals;
 using HollowCreek.UI.Common;
@@ -41,6 +42,7 @@ namespace HollowCreek.UI
             var state = Services.Get<GameState>();
 
             views.Add(new StaticTextLocalizer(root));
+            views.Add(new LocationTransitionView(root.Q("fader"), root.Q<Label>("location-title"), Services.Get<LocationLoader>()));
             views.Add(new HudView(root.Q("hud"), Services.Get<Interactor>(), modals, input, state));
             views.Add(new InspectionOverlay(root.Q("inspection"), Services.Get<InspectionController>(), input));
             views.Add(new NotebookScreen(root.Q("notebook"), modals, input, state));
