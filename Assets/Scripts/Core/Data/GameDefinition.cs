@@ -1,4 +1,7 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
+
+[assembly: InternalsVisibleTo("HollowCreek.Tests.EditMode")]
 
 namespace HollowCreek.Core.Data
 {
@@ -12,6 +15,9 @@ namespace HollowCreek.Core.Data
         [SerializeField, HideInInspector] string id;
 
         public string Id => id;
+
+        /// <summary>Только для тестов: у созданных в памяти объектов нет GUID.</summary>
+        internal void AssignId(string value) => id = value;
 
 #if UNITY_EDITOR
         protected virtual void OnValidate() => SyncId();

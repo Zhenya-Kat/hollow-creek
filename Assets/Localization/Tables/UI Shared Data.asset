@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: 0d63b5e772c972d41adeb691b1e1e120
+  m_Entries:
+  - m_Id: 657448960
+    m_Key: notebook.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723648
+    m_Key: notebook.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723649
+    m_Key: notebook.clues
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723650
+    m_Key: notebook.items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723651
+    m_Key: notebook.empty.clues
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723652
+    m_Key: notebook.empty.items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723653
+    m_Key: notebook.select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723654
+    m_Key: message.continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723655
+    m_Key: prompt.format
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723656
+    m_Key: prompt.inspect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723657
+    m_Key: prompt.read
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723658
+    m_Key: prompt.take
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723659
+    m_Key: prompt.talk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723660
+    m_Key: prompt.open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723661
+    m_Key: toast.clue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723662
+    m_Key: toast.item
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723663
+    m_Key: inspect.hint.km
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723664
+    m_Key: inspect.hint.gamepad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723665
+    m_Key: key.LMB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723666
+    m_Key: key.RMB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 749723667
+    m_Key: key.MMB
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 547263845907824795
+  references:
+    version: 2
+    RefIds:
+    - rid: 547263845907824795
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1790521825593

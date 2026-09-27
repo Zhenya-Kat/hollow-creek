@@ -1,6 +1,7 @@
 using System;
 using HollowCreek.Core;
 using HollowCreek.Core.Data;
+using HollowCreek.Core.State;
 using HollowCreek.Gameplay.Locations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,7 +9,8 @@ using UnityEngine.SceneManagement;
 namespace HollowCreek.Gameplay.Bootstrap
 {
     /// <summary>
-    /// Точка входа в игру. Живёт в постоянной сцене Bootstrap: регистрирует сервисы и загружает первую локацию.
+    /// Точка входа в игру. Живёт в постоянной сцене Bootstrap: создаёт состояние игры и загружает первую локацию.
+    /// Сервисы-компоненты (управление, загрузчик локаций…) регистрируются сами в своём Awake.
     /// </summary>
     [DefaultExecutionOrder(-1000)]
     public sealed class GameBootstrapper : MonoBehaviour
@@ -24,15 +26,17 @@ namespace HollowCreek.Gameplay.Bootstrap
         [SerializeField, Tooltip("С какой локации начинается новая игра")]
         LocationDefinition startLocation;
 
+        readonly GameState state = new();
+
         void Awake()
         {
-            Services.Register(locationLoader);
+            Services.Register(state);
             Services.Register(locationCatalog);
         }
 
         void OnDestroy()
         {
-            Services.Unregister(locationLoader);
+            Services.Unregister(state);
             Services.Unregister(locationCatalog);
         }
 

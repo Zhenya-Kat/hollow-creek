@@ -1,0 +1,102 @@
+using HollowCreek.Core;
+using HollowCreek.Gameplay.Input;
+using HollowCreek.Gameplay.Locations;
+using UnityEngine;
+
+namespace HollowCreek.Gameplay.Player
+{
+    /// <summary>Ходьба от первого лица: WASD/стик — движение, мышь/правый стик — обзор.</summary>
+    [RequireComponent(typeof(CharacterController))]
+    public sealed class PlayerController : MonoBehaviour
+    {
+        [Header("Ссылки")]
+        [SerializeField, Tooltip("Голова: вращается вверх-вниз, к ней прикреплена камера")]
+        Transform head;
+
+        [Header("Движение")]
+        [SerializeField] float walkSpeed = 3.0f;
+        [SerializeField] float sprintSpeed = 5.0f;
+        [SerializeField, Tooltip("Как быстро набирается и сбрасывается скорость")]
+        float acceleration = 14f;
+        [SerializeField] float gravity = -20f;
+
+        [Header("Обзор")]
+        [SerializeField, Tooltip("Градусов на пиксель движения мыши")]
+        float mouseSensitivity = 0.1f;
+        [SerializeField, Tooltip("Градусов в секунду при полном отклонении стика")]
+        float gamepadLookSpeed = 160f;
+        [SerializeField] float minPitch = -80f;
+        [SerializeField] float maxPitch = 80f;
+
+        CharacterController body;
+        GameInput input;
+        LocationLoader locations;
+        Vector3 horizontalVelocity;
+        float verticalVelocity;
+        float pitch;
+
+        void Awake()
+        {
+            body = GetComponent<CharacterController>();
+            input = Services.Get<GameInput>();
+            locations = Services.Get<LocationLoader>();
+        }
+
+        void OnEnable() => locations.LocationLoaded += OnLocationLoaded;
+        void OnDisable() => locations.LocationLoaded -= OnLocationLoaded;
+
+        void Update()
+        {
+            var controllable = input.Mode == InputMode.Gameplay;
+            if (controllable) UpdateLook();
+            UpdateMovement(controllable);
+        }
+
+        /// <summary>Поворот тела (градусы вокруг вертикали).</summary>
+        public float Yaw => transform.eulerAngles.y;
+
+        /// <summary>Наклон головы: отрицательный — вверх, положительный — вниз.</summary>
+        public float Pitch => pitch;
+
+        /// <summary>Мгновенно переместить игрока (вход в локацию, загрузка сохранения).</summary>
+        public void Teleport(Vector3 position, float yaw, float headPitch = 0f)
+        {
+            // CharacterController перезаписывает позицию, пока включён.
+            body.enabled = false;
+            transform.SetPositionAndRotation(position, Quaternion.Euler(0f, yaw, 0f));
+            body.enabled = true;
+            pitch = Mathf.Clamp(headPitch, minPitch, maxPitch);
+            head.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+            horizontalVelocity = Vector3.zero;
+            verticalVelocity = 0f;
+        }
+
+        void UpdateLook()
+        {
+            var look = input.Look.ReadValue<Vector2>();
+            var degrees = GameInput.IsFromGamepad(input.Look)
+                ? look * (gamepadLookSpeed * Time.deltaTime)
+                : look * mouseSensitivity;
+
+            transform.Rotate(0f, degrees.x, 0f);
+            pitch = Mathf.Clamp(pitch - degrees.y, minPitch, maxPitch);
+            head.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+        }
+
+        void UpdateMovement(bool controllable)
+        {
+            var move = controllable ? input.Move.ReadValue<Vector2>() : Vector2.zero;
+            var speed = controllable && input.Sprint.IsPressed() ? sprintSpeed : walkSpeed;
+            var target = (transform.right * move.x + transform.forward * move.y) * speed;
+            horizontalVelocity = Vector3.MoveTowards(horizontalVelocity, target, acceleration * Time.deltaTime);
+
+            verticalVelocity = body.isGrounded ? -1f : verticalVelocity + gravity * Time.deltaTime;
+            body.Move((horizontalVelocity + Vector3.up * verticalVelocity) * Time.deltaTime);
+        }
+
+        void OnLocationLoaded(LocationRoot location, SpawnPoint spawn)
+        {
+            if (spawn != null) Teleport(spawn.transform.position, spawn.transform.eulerAngles.y);
+        }
+    }
+}

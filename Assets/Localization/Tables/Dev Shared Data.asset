@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Dev Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Dev
+  m_TableCollectionNameGuidString: 86eac051302f5a743a00db3fc633fdbd
+  m_Entries:
+  - m_Id: 204464128
+    m_Key: poster.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350208
+    m_Key: poster.subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350209
+    m_Key: poster.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350210
+    m_Key: crate.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350211
+    m_Key: crate.text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350212
+    m_Key: pencil.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 288350213
+    m_Key: pencil.text
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 547263845907824796
+  references:
+    version: 2
+    RefIds:
+    - rid: 547263845907824796
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1790521825773

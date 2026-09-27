@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="inspection" class="layer inspection hidden" picking-mode="Ignore">
+        <ui:VisualElement class="panel inspection__panel" picking-mode="Ignore">
+            <ui:Label name="title" class="title" />
+            <ui:Label name="description" class="body-text" />
+            <ui:Label name="hint" class="inspection__hint" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

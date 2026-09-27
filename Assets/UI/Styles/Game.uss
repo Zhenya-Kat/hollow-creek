@@ -1,0 +1,259 @@
+/* Общие цвета и шрифты игры. Переменные используются во всех экранах. */
+:root {
+    --color-ink: rgb(10, 15, 19);
+    --color-panel: rgba(16, 23, 27, 0.96);
+    --color-panel-light: rgb(30, 40, 44);
+    --color-line: rgba(214, 204, 173, 0.18);
+    --color-cream: rgb(214, 204, 173);
+    --color-muted: rgb(150, 144, 126);
+    --color-amber: rgb(235, 166, 82);
+    --color-rust: rgb(191, 94, 33);
+    --font-body: url("project://database/Assets/UI/Fonts/PTSans-Regular.ttf");
+    --font-bold: url("project://database/Assets/UI/Fonts/PTSans-Bold.ttf");
+    --font-title: url("project://database/Assets/UI/Fonts/PTSerif-Bold.ttf");
+
+    -unity-font-definition: var(--font-body);
+    color: var(--color-cream);
+    font-size: 20px;
+}
+
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------- Общие элементы ---------- */
+
+.title {
+    -unity-font-definition: var(--font-title);
+    font-size: 34px;
+    color: var(--color-amber);
+    white-space: normal;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--color-muted);
+    letter-spacing: 1px;
+    white-space: normal;
+}
+
+.body-text {
+    font-size: 21px;
+    white-space: normal;
+    margin-top: 12px;
+}
+
+.section-header {
+    -unity-font-definition: var(--font-bold);
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: var(--color-amber);
+    margin-top: 18px;
+    margin-bottom: 6px;
+}
+
+.button {
+    -unity-font-definition: var(--font-bold);
+    font-size: 19px;
+    color: var(--color-cream);
+    background-color: var(--color-panel-light);
+    border-width: 1px;
+    border-color: var(--color-line);
+    border-radius: 3px;
+    padding: 10px 22px;
+    margin: 0;
+    transition-duration: 0.12s;
+}
+
+.button:hover {
+    border-color: var(--color-amber);
+    color: var(--color-amber);
+}
+
+.button:active {
+    background-color: rgb(44, 56, 60);
+}
+
+.dim {
+    background-color: rgba(4, 7, 9, 0.72);
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    background-color: var(--color-panel);
+    border-width: 1px;
+    border-color: var(--color-line);
+    border-radius: 4px;
+    padding: 32px 40px;
+}
+
+/* ---------- HUD ---------- */
+
+.crosshair {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    translate: -50% -50%;
+    border-radius: 3px;
+    background-color: rgba(214, 204, 173, 0.55);
+    transition-property: width, height, background-color;
+    transition-duration: 0.12s;
+}
+
+.crosshair--active {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: var(--color-amber);
+}
+
+.prompt {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 53%;
+    -unity-text-align: upper-center;
+    -unity-font-definition: var(--font-bold);
+    font-size: 20px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.toasts {
+    position: absolute;
+    right: 32px;
+    top: 28px;
+    align-items: flex-end;
+}
+
+.toast {
+    background-color: var(--color-panel);
+    border-left-width: 3px;
+    border-left-color: var(--color-amber);
+    padding: 10px 18px;
+    margin-bottom: 8px;
+    font-size: 19px;
+    opacity: 1;
+    translate: 0 0;
+    transition-property: opacity, translate;
+    transition-duration: 0.35s;
+}
+
+.toast--hidden {
+    opacity: 0;
+    translate: 40px 0;
+}
+
+/* ---------- Осмотр ---------- */
+
+.inspection {
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 36px;
+}
+
+.inspection__panel {
+    width: 62%;
+    max-width: 980px;
+    padding: 22px 30px;
+}
+
+.inspection__hint {
+    margin-top: 14px;
+    font-size: 15px;
+    color: var(--color-muted);
+}
+
+/* ---------- Сообщение ---------- */
+
+.message__panel {
+    width: 60%;
+    max-width: 900px;
+    max-height: 80%;
+}
+
+.message__body {
+    flex-shrink: 1;
+}
+
+.message__footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+/* ---------- Дневник ---------- */
+
+.notebook__panel {
+    width: 82%;
+    height: 82%;
+    max-width: 1500px;
+}
+
+.notebook__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--color-line);
+    padding-bottom: 14px;
+}
+
+.notebook__columns {
+    flex-direction: row;
+    flex-grow: 1;
+    margin-top: 16px;
+}
+
+.notebook__list {
+    width: 36%;
+    border-right-width: 1px;
+    border-right-color: var(--color-line);
+    padding-right: 16px;
+}
+
+.notebook__detail {
+    flex-grow: 1;
+    padding-left: 32px;
+}
+
+.notebook__entry {
+    -unity-text-align: middle-left;
+    font-size: 19px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-left-width: 3px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+    padding: 8px 12px;
+    margin: 0 0 2px 0;
+    color: var(--color-cream);
+    white-space: normal;
+}
+
+.notebook__entry:hover {
+    background-color: var(--color-panel-light);
+}
+
+.notebook__entry--selected {
+    border-left-color: var(--color-amber);
+    background-color: var(--color-panel-light);
+    color: var(--color-amber);
+}
+
+.notebook__empty {
+    color: var(--color-muted);
+    font-size: 18px;
+    margin-top: 6px;
+    white-space: normal;
+}

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="message" class="layer dim hidden">
+        <ui:VisualElement class="panel message__panel">
+            <ui:Label name="title" class="title" />
+            <ui:ScrollView name="body-scroll" class="message__body" horizontal-scroller-visibility="Hidden">
+                <ui:Label name="body" class="body-text" />
+            </ui:ScrollView>
+            <ui:VisualElement class="message__footer">
+                <ui:Button name="continue" text="@message.continue" class="button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

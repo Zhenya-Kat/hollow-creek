@@ -1,4 +1,5 @@
 using System;
+using HollowCreek.Core;
 using HollowCreek.Core.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,7 @@ namespace HollowCreek.Gameplay.Locations
     /// Загружает и выгружает сцены-локации поверх постоянной сцены Bootstrap.
     /// Одновременно загружена только одна локация.
     /// </summary>
+    [DefaultExecutionOrder(-900)]
     public sealed class LocationLoader : MonoBehaviour
     {
         /// <summary>Локация загружена; передаётся точка, в которой должен появиться игрок (может быть null).</summary>
@@ -16,6 +18,9 @@ namespace HollowCreek.Gameplay.Locations
 
         public LocationRoot Current { get; private set; }
         public bool IsLoading { get; private set; }
+
+        void Awake() => Services.Register(this);
+        void OnDestroy() => Services.Unregister(this);
 
         public async Awaitable LoadAsync(LocationDefinition location, string spawnId = null)
         {
