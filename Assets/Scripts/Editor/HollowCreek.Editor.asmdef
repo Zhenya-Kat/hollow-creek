@@ -6,7 +6,8 @@
         "HollowCreek.Gameplay",
         "HollowCreek.UI",
         "Unity.Localization",
-        "Unity.Localization.Editor"
+        "Unity.Localization.Editor",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"

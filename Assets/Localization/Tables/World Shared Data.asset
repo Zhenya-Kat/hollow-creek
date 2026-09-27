@@ -123,6 +123,58 @@ MonoBehaviour:
     m_Key: mirror.sign
     m_Metadata:
       m_Items: []
+  - m_Id: 61000584781824
+    m_Key: photobox.plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61002581270528
+    m_Key: portrait.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61004003139584
+    m_Key: receipt.print.header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61004003139585
+    m_Key: receipt.hand.deposit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61004598730752
+    m_Key: receipt.print.signature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61004602925056
+    m_Key: receipt.hand.signature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61007098535936
+    m_Key: safe_note.hand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62295051853824
+    m_Key: outage.print.header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62295181877248
+    m_Key: outage.print.body
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62298017226752
+    m_Key: postcard.hand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62298017226753
+    m_Key: postcard.address
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62298021421056
+    m_Key: postcard.alice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62299057414144
+    m_Key: poster.procession
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
