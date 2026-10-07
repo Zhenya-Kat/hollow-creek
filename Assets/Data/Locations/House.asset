@@ -22,10 +22,10 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  sceneName: House
+  sceneName: Street
   ambience: {fileID: 11400000, guid: 54cdbd6b85734fe4e9dd0d01bdb8faa7, type: 2}
   footsteps: {fileID: 11400000, guid: 366718b9f33f217429473952d7d43833, type: 2}
-  scene: {fileID: 102900000, guid: 8401204bb1545b941a27fddba1bdb05b, type: 3}
+  scene: {fileID: 102900000, guid: 70ee5eac938f1c044bf0f9e7ffa04c63, type: 3}
   references:
     version: 2
     RefIds: []

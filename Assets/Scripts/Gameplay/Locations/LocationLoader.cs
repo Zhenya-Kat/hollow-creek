@@ -41,6 +41,15 @@ namespace HollowCreek.Gameplay.Locations
             try
             {
                 LoadingStarted?.Invoke(location);
+                // Several logical locations can share one physical scene.
+                var loaded = SceneManager.GetSceneByName(location.SceneName);
+                var localRoot = LocationRoot.FindIn(loaded, location);
+                if (localRoot != null && Current != null && Current.gameObject.scene == loaded)
+                {
+                    await Awaitable.WaitForSecondsAsync(fadeOutTime);
+                    Enter(localRoot, spawnId);
+                    return;
+                }
                 if (Current != null)
                 {
                     await Awaitable.WaitForSecondsAsync(fadeOutTime);
@@ -51,7 +60,7 @@ namespace HollowCreek.Gameplay.Locations
 
                 await SceneManager.LoadSceneAsync(location.SceneName, LoadSceneMode.Additive);
                 var scene = SceneManager.GetSceneByName(location.SceneName);
-                var root = LocationRoot.FindIn(scene);
+                var root = LocationRoot.FindIn(scene, location);
                 if (root == null)
                     throw new InvalidOperationException($"В сцене «{location.SceneName}» нет компонента LocationRoot.");
                 Enter(root, spawnId);

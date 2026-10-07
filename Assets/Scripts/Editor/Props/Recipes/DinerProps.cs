@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 namespace HollowCreek.Editor.Props.Recipes
@@ -201,24 +202,33 @@ namespace HollowCreek.Editor.Props.Recipes
         [PropRecipe]
         static void Tongs(PropBuilder b)
         {
-            var k = new MeshKit();
-            var steel = k.Mat("Chrome");
-            foreach (var s in new[] { -1f, 1f })
+            // Tongs by Poly by Google, CC BY 3.0; attribution in docs/CREDITS.md.
+            const string path = "Assets/Art/Props/Models/BakeryTongs/Tongs.glb";
+            var source = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+            if (source == null) throw new System.InvalidOperationException($"Missing imported tongs: {path}");
+
+            var model = Object.Instantiate(source, b.Root.transform);
+            model.name = "Tongs";
+            model.transform.localPosition = Vector3.zero;
+            // Rest a broad gripping face on the counter rather than balancing on its edge.
+            model.transform.localRotation = Quaternion.Euler(0, 0, 90);
+            model.transform.localScale = Vector3.one;
+            var renderers = model.GetComponentsInChildren<Renderer>();
+            var bounds = renderers[0].bounds;
+            foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
+            // The imported mesh has its length along Z. Keep its proportions.
+            model.transform.localScale = Vector3.one * (0.28f / bounds.size.z);
+            bounds = renderers[0].bounds;
+            foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
+            model.transform.localPosition = new Vector3(-bounds.center.x, -bounds.min.y, -bounds.center.z);
+
+            var steel = PropMaterials.Get("BakeryTongsSteel");
+            foreach (var renderer in renderers)
             {
-                var path = new List<Vector3>();
-                for (var i = 0; i <= 12; i++)
-                {
-                    var t = i / 12f;
-                    path.Add(new Vector3(s * (0.004f + t * 0.022f), 0.006f + Mathf.Sin(t * Mathf.PI) * 0.01f, -0.1f + t * 0.2f));
-                }
-                k.Sweep(path, new Vector2(0.014f, 0.0012f), steel);
-                // Зубчатые захваты.
-                using (k.At(path[path.Count - 1] + new Vector3(0, 0, 0.018f)))
-                    for (var j = 0; j < 4; j++)
-                        k.Box(new Vector3((j - 1.5f) * 0.004f, 0, 0), new Vector3(0.003f, 0.0015f, 0.036f), steel, 0.0006f);
+                var materials = renderer.sharedMaterials;
+                for (var i = 0; i < materials.Length; i++) materials[i] = steel;
+                renderer.sharedMaterials = materials;
             }
-            k.Torus(new Vector3(0, 0.008f, -0.105f), 0.008f, 0.0015f, steel, 16, 6);
-            b.Part("Tongs", k);
         }
 
         // ------------------------------------------------------------------ Кофе и пирог Мары

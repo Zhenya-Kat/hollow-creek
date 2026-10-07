@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using UnityEngine;
 
@@ -70,6 +70,8 @@ namespace HollowCreek.Core.Save
         /// </summary>
         static void Migrate(SaveData data)
         {
+            // Version 1 predates the unified house; missing worldSpacePose remains false.
+            if (data.version < 2) data.worldSpacePose = false;
             data.facts ??= new();
             data.askedTopics ??= new();
             data.hints ??= new();
@@ -77,3 +79,4 @@ namespace HollowCreek.Core.Save
         }
     }
 }
+

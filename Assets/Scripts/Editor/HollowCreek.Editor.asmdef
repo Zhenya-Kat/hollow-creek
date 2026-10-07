@@ -7,7 +7,8 @@
         "HollowCreek.UI",
         "Unity.Localization",
         "Unity.Localization.Editor",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "Unity.RenderPipelines.Core.Runtime"
     ],
     "includePlatforms": [
         "Editor"

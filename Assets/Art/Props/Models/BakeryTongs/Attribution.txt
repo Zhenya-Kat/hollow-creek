@@ -1,0 +1,11 @@
+Tongs by Poly by Google
+Source: https://poly.pizza/m/erVliOeDLL2
+Original download: https://static.poly.pizza/041955cd-620c-4b05-9101-54ebb81ecc31.glb
+License: Creative Commons Attribution 3.0 Unported (CC BY 3.0)
+https://creativecommons.org/licenses/by/3.0/
+
+Adapted for Hollow Creek: scaled to 28 cm, centered on the resting surface,
+and assigned a stainless steel material for the project's Unity URP renderer.
+The downloaded GLB geometry is retained unchanged.
+
+Retain this attribution when distributing the model or an adaptation.

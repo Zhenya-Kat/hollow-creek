@@ -85,7 +85,7 @@ namespace HollowCreek.Editor.Props
                 Attach("Diner Window", "DinerBlinds", new Vector3(0.025f, 0, 0), 90, false),
                 Attach("Front Door", "DinerDoor", new Vector3(0, -1.1f, -0.08f), 0, false),
                 Place("Props", "Register", new Vector3(3.5f, 1.05f, 8.5f)),
-                Place("Props", "Tongs", new Vector3(0.35f, 1.05f, 8.3f), 30),
+                Place("Props", "Tongs", new Vector3(0.35f, 1.046f, 8.3f), 30),
                 Place("Props", "PieSlice", new Vector3(-4.65f, 0.76f, 5.8f), 200),
             }, new[] { "Register", "cup-coffee", "pie" }),
         };

@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using HollowCreek.Core.Save;
 using HollowCreek.Core.State;
 using NUnit.Framework;
@@ -46,6 +46,19 @@ namespace HollowCreek.Tests
         }
 
         [Test]
+        public void LegacyPoseRemainsMarkedForMigrationAndNewWorldPoseRoundTrips()
+        {
+            File.WriteAllText(path, "{\"version\":1,\"location\":\"house\",\"position\":{\"x\":0,\"y\":0,\"z\":13}}");
+            var legacy = store.Read();
+            Assert.That(legacy.version, Is.EqualTo(SaveData.CurrentVersion));
+            Assert.That(legacy.worldSpacePose, Is.False);
+            Assert.That(legacy.position.z, Is.EqualTo(13));
+            legacy.worldSpacePose = true;
+            store.Write(legacy);
+            Assert.That(store.Read().worldSpacePose, Is.True);
+            Assert.That(store.Read().position.z, Is.EqualTo(13));
+        }
+        [Test]
         public void Read_ReturnsNull_WhenMissingOrCorrupted()
         {
             Assert.IsNull(store.Read());
@@ -86,3 +99,4 @@ namespace HollowCreek.Tests
         }
     }
 }
+

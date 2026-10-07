@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,12 +12,13 @@ namespace HollowCreek.Core.Save
     [Serializable]
     public sealed class SaveData
     {
-        public const int CurrentVersion = 1;
+        public const int CurrentVersion = 2;
 
         public int version = CurrentVersion;
         public string episode;
         public string location;
         public Vector3 position;
+        public bool worldSpacePose;
         public float yaw;
         public float pitch;
         public List<string> facts = new();
@@ -28,3 +29,4 @@ namespace HollowCreek.Core.Save
         public string savedAt;
     }
 }
+

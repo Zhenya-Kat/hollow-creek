@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using HollowCreek.Core;
 using HollowCreek.Core.Data;
 using HollowCreek.Core.Dialogue;
@@ -93,6 +93,7 @@ namespace HollowCreek.Gameplay.Save
             var data = new SaveData
             {
                 episode = episode.Id,
+                worldSpacePose = true,
                 location = locations.Current != null ? locations.Current.Location.Id : null,
                 facts = state.Facts.Select(f => f.Id).ToList(),
                 askedTopics = log.Entries.ToList(),
@@ -126,3 +127,4 @@ namespace HollowCreek.Gameplay.Save
         }
     }
 }
+

@@ -1,0 +1,25 @@
+Kloppenheim 07 by Greg Zaal / Poly Haven
+Source: https://polyhaven.com/a/kloppenheim_07
+Download: https://dl.polyhaven.org/file/ph-assets/HDRIs/extra/Tonemapped%20JPG/kloppenheim_07.jpg
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Used as a tinted 360-degree late-evening horizon shared by Street and the diner window.
+The original downloaded panorama is retained unchanged.
+Foreground tree: Tree by Quaternius
+Source: https://poly.pizza/m/qZtx0AHhcy
+Download: https://static.poly.pizza/24cf9df9-435f-408e-971b-640d670ce973.glb
+License: CC0 1.0 Universal
+Adapted with two scales, rotations, and dark evening materials.
+Rain and distant light effects were authored for Hollow Creek.
+
+Street lamps and carved pumpkins: Kenney Graveyard Kit (CC0 1.0)
+Source assets: Assets/Art/Environment/Kenney/Graveyard
+License: Assets/Art/Environment/Kenney/Graveyard/License.txt
+https://kenney.nl/assets/graveyard-kit
+Adapted in scale and materials, with warm lamp lighting added.
+
+Street buildings and the opposite house: Kenney Suburban Kit (CC0 1.0)
+Source assets: Assets/Art/Environment/Kenney/Suburban
+License: Assets/Art/Environment/Kenney/Suburban/License.txt
+The same street geometry and models are used in Street and behind the diner window.

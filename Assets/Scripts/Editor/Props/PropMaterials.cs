@@ -47,6 +47,7 @@ namespace HollowCreek.Editor.Props
             ["Bronze"] = D(C(0.42f, 0.33f, 0.20f), 1f, 0.40f, "metal_wear"),
             ["Chrome"] = D(C(0.86f, 0.86f, 0.88f), 1f, 0.86f),
             ["Steel"] = D(C(0.55f, 0.56f, 0.58f), 1f, 0.55f, "metal_wear"),
+            ["BakeryTongsSteel"] = D(C(0.78f, 0.80f, 0.82f), 0.75f, 0.48f),
             ["SteelDark"] = D(C(0.20f, 0.21f, 0.22f), 0.9f, 0.45f, "metal_wear"),
             ["BlackMetal"] = D(C(0.05f, 0.05f, 0.05f), 0.7f, 0.40f),
             ["GoldPaint"] = D(C(0.86f, 0.68f, 0.32f), 0.8f, 0.55f),

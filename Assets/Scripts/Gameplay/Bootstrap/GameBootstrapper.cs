@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using HollowCreek.Core;
 using HollowCreek.Core.Data;
 using HollowCreek.Core.State;
@@ -76,7 +76,12 @@ namespace HollowCreek.Gameplay.Bootstrap
                     if (locationLoader.Current == null || locationLoader.Current.Location != location)
                         await locationLoader.LoadAsync(location);
                     if (save.location == location.Id && Services.TryGet<PlayerController>(out var player))
-                        player.Teleport(save.position, save.yaw, save.pitch);
+                    {
+                        var position = save.position;
+                        var yaw = save.yaw;
+                        if (!save.worldSpacePose) locationLoader.Current.ResolveSavedPose(ref position, ref yaw);
+                        player.Teleport(position, yaw, save.pitch);
+                    }
                 }
                 else
                 {
@@ -113,3 +118,4 @@ namespace HollowCreek.Gameplay.Bootstrap
         }
     }
 }
+
