@@ -24,8 +24,18 @@
 
 ## Сборка игры
 
-**File → Build Profiles → Windows → Build**, папка `Build/Windows` (она не попадает в git).
-Сцена `Bootstrap` должна быть первой в списке сцен, `Sandbox` — выключена (это тестовая комната).
+Релизные сборки Windows и Linux x86-64 включают локальные Addressables. Установите соответствующие модули Unity Build Support и выполните из корня проекта:
+
+```powershell
+unity build . --target StandaloneWindows64 --execute-method HollowCreek.ReleaseBuild.Windows
+unity build . --target StandaloneLinux64 --execute-method HollowCreek.ReleaseBuild.Linux
+```
+
+Результаты находятся в `Builds/Release/Windows` и `Builds/Release/Linux`; рядом с исполняемыми файлами сохраняются отчёты `build-report.json`. Windows собирается через IL2CPP (нужен C++ toolchain Visual Studio), Linux — через Mono. Это обычные сборки без Development Mode. Папка `Builds` исключена из git. Запускайте команды последовательно при закрытом редакторе проекта.
+
+После успешной сборки обеих платформ выполните `python Tools/package_release.py`: скрипт создаёт ZIP для Windows, `tar.gz` для Linux и `SHA256SUMS.txt` в `Builds/Release`. В Linux-архиве сохраняется право запуска плеера; служебные отладочные папки Unity в архивы не включаются.
+
+Сцена `Bootstrap` должна быть первой в списке включённых сцен; сборщик проверяет это перед запуском. Для ручной сборки также доступно **File → Build Profiles → Windows/Linux → Build**.
 
 ## Структура проекта
 

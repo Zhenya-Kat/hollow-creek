@@ -38,6 +38,19 @@ unity command --project-path C:\Users\Zhenya\Documents\hollow-creek find_gameobj
 
 Оживление улицы (фонари, группы тыкв, выбор освещённых окон) — `StreetLifeAuthoring.Apply`. Его вызывает `EveningStreetAuthoring.Build`. Размещение использует фиксированный seed: хаотичная композиция сохраняется между пересборками и загрузками.
 
+## Релизные сборки
+
+Для сборок используйте `Assets/Editor/ReleaseBuild.cs` и `unity build` с расширенным доступом. Запускайте Windows и Linux последовательно при закрытом редакторе проекта:
+
+```powershell
+unity build . --target StandaloneWindows64 --execute-method HollowCreek.ReleaseBuild.Windows
+unity build . --target StandaloneLinux64 --execute-method HollowCreek.ReleaseBuild.Linux
+```
+
+Windows собирается через IL2CPP: на этом ПК установлен Visual Studio C++ toolchain и Windows SDK `10.0.26100.0`. Обычный Windows Mono player в установке редактора отсутствует, поэтому не переключайте Windows-релиз на Mono без восстановления соответствующих файлов Unity. Для Linux установлен Linux Build Support (Mono). Сборщик явно выбирает нужный backend и предварительно собирает локальные Addressables.
+
+Результаты и отчёты находятся в игнорируемой папке `Builds/Release`. `Tools/package_release.py` упаковывает только успешные сборки, сохраняет исполняемые права Linux и создаёт SHA-256. Не добавляйте архивы релиза, журналы, скачанные инструменты и служебные папки Unity в git; загружайте готовые архивы в GitHub Releases.
+
 ## Коммиты
 
 Делайте коммиты по мере необходимости: после завершения и проверки логического этапа работы, чтобы изменения не накапливались в один большой коммит. Для таких коммитов отдельное подтверждение пользователя не требуется.
